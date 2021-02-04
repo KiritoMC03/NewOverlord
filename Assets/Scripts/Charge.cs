@@ -6,7 +6,7 @@ namespace NewOverlord
     [RequireComponent(typeof(Collider))]
     public class Charge : MonoBehaviour
     {
-        internal Vector3 target = new Vector3(-666, -666, -666);
+        internal Transform target = null;
 
         [SerializeField] private float moveSpeed = 4f;
 
@@ -27,16 +27,12 @@ namespace NewOverlord
 
         private void MoveCharge()
         {
-            if(target == _errorTarget)
+            if(target == null)
             {
                 return;
             }
 
-            var force = (target - _transform.position) * Time.fixedDeltaTime * moveSpeed;
-
-            _rigidbody.AddForce(force);
-
-            //_transform.position = Vector3.MoveTowards(_transform.position, target, moveSpeed * Time.deltaTime);
+            _rigidbody.velocity = (target.position - _transform.position).normalized * moveSpeed * Time.fixedDeltaTime;
         }
 
         private void OnCollisionEnter(Collision collision)

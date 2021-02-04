@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Sinner : MonoBehaviour
+namespace NewOverlord
 {
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(NavMeshAgent))]
+    public class Sinner : MonoBehaviour, INavMeshAgent
     {
+        internal NavMeshAgent agent = null;
+        private Transform _transform;
         
-    }
+        private void Awake()
+        {
+            _transform = transform;
+            agent = GetComponent<NavMeshAgent>();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void FindNextPosition()
+        {
+
+        }
+
+        public void GoNext()
+        {
+
+        }
     }
 }
