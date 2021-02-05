@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace NewOverlord
 {
@@ -7,12 +9,15 @@ namespace NewOverlord
     public class Charge : MonoBehaviour
     {
         internal Transform target = null;
+        internal Coroutine destroyRoutine = null;
+        internal bool chargeAlive = true;
 
-        [SerializeField] private float moveSpeed = 4f;
+        [SerializeField] protected float moveSpeed = 4f;
 
-        private Vector3 _errorTarget = new Vector3(-666, -666, -666);
-        private Transform _transform;
-        private Rigidbody _rigidbody;
+        protected Vector3 errorTarget = new Vector3(-666, -666, -666);
+        protected Transform _transform = null;
+        protected Rigidbody _rigidbody = null;
+        protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
 
         private void Awake()
         {
@@ -20,29 +25,59 @@ namespace NewOverlord
             _rigidbody = GetComponent<Rigidbody>();
         }
 
-        private void FixedUpdate()
+        virtual protected void MoveCharge()
         {
-            MoveCharge();
-        }
-
-        private void MoveCharge()
-        {
-            if(target == null)
+            if (!CheckTargetAndAlive())
             {
                 return;
             }
+            
+            _rigidbody.velocity = (target.position + offsetFromGround - _transform.position).normalized * moveSpeed * Time.fixedDeltaTime;
+        }
 
-            _rigidbody.velocity = (target.position - _transform.position).normalized * moveSpeed * Time.fixedDeltaTime;
+        virtual protected bool CheckTargetAndAlive()
+        {
+            if (!chargeAlive)
+            {
+                return false;
+            }
+
+            if (target == null)
+            {
+                destroyRoutine = StartCoroutine(DestroyRoutine(2));
+                return false;
+            }
+
+            return true;
         }
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("Collision!");
+            Debug.Log("Collision");
             if(collision.gameObject.GetComponent<Sinner>() != null)
             {
-                Debug.Log("Collision! IFFF");
+                Debug.Log("CollisionDestroy");
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
+            }
+        }
+
+        IEnumerator DestroyRoutine(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            Destroy();
+        }
+
+        virtual protected void Destroy()
+        {
+            Destroy(gameObject);
+        }
+
+        virtual protected void OnDestroy()
+        {
+            if (destroyRoutine != null)
+            {
+                StopCoroutine(destroyRoutine);
             }
         }
     }

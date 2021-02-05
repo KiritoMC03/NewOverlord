@@ -55,8 +55,8 @@ namespace NewOverlord
 
 		private Vector3 FindNextPosition()
 		{
-			_randomX = Mathf.Clamp(UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius), -_walkableGroundRadius, _walkableGroundRadius);
-			_randomZ = Mathf.Clamp(UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius), -_walkableGroundRadius, _walkableGroundRadius);
+			_randomX = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius);
+			_randomZ = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius);
 
 			return new Vector3(_randomX, 0, _randomZ);
 		}

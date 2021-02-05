@@ -15,6 +15,7 @@ namespace NewOverlord
         {
             _transform = transform;
             agent = GetComponent<NavMeshAgent>();
+            gameObject.layer = 10; // Sinners
         }
 
         public void FindNextPosition()
