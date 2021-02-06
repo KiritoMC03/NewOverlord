@@ -14,6 +14,7 @@ namespace NewOverlord
         [SerializeField] private float _spread = 5f;
         [Range(0.1f, 5f)]
         [SerializeField] internal float speed = 0.5f;
+        [SerializeField] private Transform walkableGround;
 
         private Transform _transform;
         private Coroutine _spawnerRoutine;
@@ -42,7 +43,12 @@ namespace NewOverlord
 
             for (int i = 0; i < count; i++)
             {
-                Instantiate(sinner);
+                var newSinner = Instantiate(sinner).GetComponent<WanderMode>();
+
+                if (newSinner != null)
+                {
+                    newSinner.walkableGround = walkableGround;
+                }
                 yield return new WaitForSeconds(speed);
             }
         }

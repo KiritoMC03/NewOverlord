@@ -6,28 +6,30 @@ namespace NewOverlord
 {
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(Collider))]
-    public class Charge : MonoBehaviour
+    public class Spell : MonoBehaviour
     {
         internal Transform target = null;
         internal Coroutine destroyRoutine = null;
-        internal bool chargeAlive = true;
+        internal bool spellAlive = true;
 
         [SerializeField] protected float moveSpeed = 4f;
+        [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
 
         protected Vector3 errorTarget = new Vector3(-666, -666, -666);
         protected Transform _transform = null;
         protected Rigidbody _rigidbody = null;
-        protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
+        protected Vector3 scale = Vector3.zero;
 
         private void Awake()
         {
             _transform = transform;
+            scale = _transform.localScale;
             _rigidbody = GetComponent<Rigidbody>();
         }
 
-        virtual protected void MoveCharge()
+        virtual protected void Move()
         {
-            if (!CheckTargetAndAlive())
+            if (!CheckTargetAndAliveAsTrue())
             {
                 return;
             }
@@ -35,28 +37,36 @@ namespace NewOverlord
             _rigidbody.velocity = (target.position + offsetFromGround - _transform.position).normalized * moveSpeed * Time.fixedDeltaTime;
         }
 
-        virtual protected bool CheckTargetAndAlive()
+        virtual protected void Set()
         {
-            if (!chargeAlive)
+            if (!CheckTargetAndAliveAsTrue())
+            {
+                return;
+            }
+
+            _transform.position = target.position + offsetFromGround;
+        }
+
+        virtual protected bool CheckTargetAndAliveAsTrue()
+        {
+            if (!spellAlive)
             {
                 return false;
             }
 
             if (target == null)
             {
-                destroyRoutine = StartCoroutine(DestroyRoutine(2));
+                destroyRoutine = StartCoroutine(DestroyRoutine(0.5f));
                 return false;
             }
 
             return true;
         }
 
-        private void OnCollisionEnter(Collision collision)
+        virtual protected void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("Collision");
             if(collision.gameObject.GetComponent<Sinner>() != null)
             {
-                Debug.Log("CollisionDestroy");
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
@@ -73,7 +83,7 @@ namespace NewOverlord
             Destroy(gameObject);
         }
 
-        virtual protected void OnDestroy()
+        private void OnDestroy()
         {
             if (destroyRoutine != null)
             {

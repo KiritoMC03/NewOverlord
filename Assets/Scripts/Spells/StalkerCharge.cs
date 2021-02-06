@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace NewOverlord
 {
-    public class StalkerCharge : Charge
+    public class StalkerCharge : FadingSpell
     {
         private void FixedUpdate()
         {
-            MoveCharge();
+            Move();
         }
     }
 }

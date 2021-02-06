@@ -5,22 +5,17 @@ namespace NewOverlord
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] internal Charge charge = null;
+        [SerializeField] internal Spell charge = null;
 
         private Transform _transform = null;
         private Camera _mainCamera = null;
-        private Charge _newCharge = null;
+        private Spell _newCharge = null;
         private Transform _tempTarget = null;
 
         private void Awake()
         {
             _transform = transform;
             _mainCamera = Camera.main;
-        }
-
-        void Start()
-        {
-
         }
 
         void Update()
@@ -43,7 +38,7 @@ namespace NewOverlord
                 throw new Exception("Поле Charge не установлено.");
             }
 
-            _newCharge = Instantiate(charge, _transform.position, Quaternion.identity).GetComponent<Charge>();
+            _newCharge = Instantiate(charge, _transform.position, Quaternion.identity).GetComponent<Spell>();
             _newCharge.target = _tempTarget;
         }
 

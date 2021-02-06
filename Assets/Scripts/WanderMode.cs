@@ -9,13 +9,12 @@ namespace NewOverlord
 	[RequireComponent(typeof(Sinner))]
 	public class WanderMode : MonoBehaviour
 	{
-        [SerializeField] private Sinner _sinner;
-		[SerializeField] private Transform _walkableGround;
+		[SerializeField] private Sinner _sinner;
+		[SerializeField] internal Transform walkableGround;
 		[SerializeField] private float _walkableGroundRadius = 1f;
 
 		private Transform _transform;
 		private Vector3 _nextPosition = new Vector3();
-		//private StateController _stateController;
 
 		private float _randomX = 0;
 		private float _randomZ = 0;
@@ -24,8 +23,11 @@ namespace NewOverlord
 		{
 			_sinner = GetComponent<Sinner>();
 			_transform = GetComponent<Transform>();
-			_walkableGround = _walkableGround.transform;
-			//_stateController = GetComponent<StateController>();
+
+			if(walkableGround != null)
+			{
+				walkableGround = walkableGround.transform;
+			}
 		}
 
 		void Start()
@@ -44,7 +46,10 @@ namespace NewOverlord
 
 		public void UpdateMoveAgent()
 		{
-			_nextPosition = FindNextPosition() + _walkableGround.position;
+			if(walkableGround != null)
+			{
+				_nextPosition = FindNextPosition() + walkableGround.position;
+			}
 			MoveNext(_nextPosition);
 		}
 
