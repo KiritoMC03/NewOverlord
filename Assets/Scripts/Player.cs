@@ -8,6 +8,7 @@ namespace NewOverlord
         [SerializeField] internal Spell charge = null;
 
         private Transform _transform = null;
+        private Animator _animator;
         private Camera _mainCamera = null;
         private Spell _newCharge = null;
         private Transform _tempTarget = null;
@@ -15,6 +16,7 @@ namespace NewOverlord
         private void Awake()
         {
             _transform = transform;
+            _animator = GetComponent<Animator>();
             _mainCamera = Camera.main;
         }
 
@@ -27,7 +29,13 @@ namespace NewOverlord
                 if(_tempTarget != null)
                 {
                     AttackSinner();
+                    SetAnimation(true);
+                    _tempTarget = null;
                 }
+            }
+            else
+            {
+                SetAnimation(false);
             }
         }
 
@@ -47,8 +55,16 @@ namespace NewOverlord
             RaycastHit hit;
             if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out hit))
             {
-                _tempTarget = hit.collider.transform;
+                if(hit.collider.GetComponent<Sinner>() != null)
+                {
+                    _tempTarget = hit.collider.transform;
+                }
             }
+        }
+
+        private void SetAnimation(bool cond)
+        {
+            _animator.SetBool("IsAttack", cond);
         }
     }
 }

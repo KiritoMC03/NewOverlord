@@ -6,7 +6,8 @@ namespace NewOverlord
 {
     public class FadingSpell : Spell
     {
-        protected float scaleStep = 0.1f;
+        [SerializeField] protected float scaleStep = 0.1f;
+        [SerializeField] protected float fadingSpeed = 60f;
 
         private void Start()
         {
@@ -22,9 +23,9 @@ namespace NewOverlord
         {
             while (scale.x > 0f && scale.y > 0f && scale.z > 0f)
             {
-                scale.x -= scaleStep * Time.deltaTime * 60;
-                scale.y -= scaleStep * Time.deltaTime * 60;
-                scale.z -= scaleStep * Time.deltaTime * 60;
+                scale.x -= scaleStep * Time.deltaTime * fadingSpeed;
+                scale.y -= scaleStep * Time.deltaTime * fadingSpeed;
+                scale.z -= scaleStep * Time.deltaTime * fadingSpeed;
                 _transform.localScale = scale;
                 yield return new WaitForSeconds(0.1f);
             }
