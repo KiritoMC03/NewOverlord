@@ -7,9 +7,6 @@ namespace NewOverlord
 {
     public class DeadCircle : LongLastingSpell
     {
-        private void FixedUpdate()
-        {
 
-        }
     }
 }

@@ -39,6 +39,7 @@ namespace NewOverlord
             }
         }
 
+#region AttackWork
         private void AttackSinner()
         {
             if (charge == null)
@@ -61,10 +62,13 @@ namespace NewOverlord
                 }
             }
         }
+#endregion
 
+#region Animation
         private void SetAnimation(bool cond)
         {
             _animator.SetBool("IsAttack", cond);
         }
+#endregion
     }
 }

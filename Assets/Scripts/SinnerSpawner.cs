@@ -19,13 +19,19 @@ namespace NewOverlord
         private Transform _transform;
         private Coroutine _spawnerRoutine;
 
+        private WanderMode tempSinner = null;
+
         private void Awake()
         {
             _transform = transform;
 
             if (sinner == null)
             {
-                throw new Exception("Поле Creature не установлено!");
+                throw new Exception("Поле Sinner не установлено!");
+            }
+            if(walkableGround == null)
+            {
+                throw new Exception("Поле Walkable Ground не установлено!");
             }
         }
 
@@ -43,11 +49,11 @@ namespace NewOverlord
 
             for (int i = 0; i < count; i++)
             {
-                var newSinner = Instantiate(sinner).GetComponent<WanderMode>();
+                tempSinner = Instantiate(sinner).GetComponent<WanderMode>();
 
-                if (newSinner != null)
+                if (tempSinner != null)
                 {
-                    newSinner.walkableGround = walkableGround;
+                    tempSinner.walkableGround = walkableGround;
                 }
                 yield return new WaitForSeconds(speed);
             }

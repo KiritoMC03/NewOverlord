@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using UnityEngine;
 
 namespace NewOverlord
 {
     interface INavMeshAgent
     {
-        void FindNextPosition();
-        void GoNext();
+        Vector3 FindNextPosition();
+        void MoveNext(Vector3 nextPosition);
     }
 }

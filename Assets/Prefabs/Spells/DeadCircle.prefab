@@ -9693,10 +9693,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  damage: 8
   offsetFromGround: {x: 0, y: 0.2, z: 0}
   scaleStep: 0.01
   fadingSpeed: 90
-  lifeTime: 2
+  lifeTime: 10
 --- !u!135 &2825362940271391927
 SphereCollider:
   m_ObjectHideFlags: 0

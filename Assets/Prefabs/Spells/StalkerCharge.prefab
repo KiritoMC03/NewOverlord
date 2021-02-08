@@ -9693,6 +9693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 240
+  damage: 25
   offsetFromGround: {x: 0, y: 1, z: 0}
   scaleStep: 0.1
   fadingSpeed: 60

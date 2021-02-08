@@ -7,7 +7,7 @@ using UnityEngine;
 namespace NewOverlord
 {
 	[RequireComponent(typeof(Sinner))]
-	public class WanderMode : MonoBehaviour
+	public class WanderMode : MonoBehaviour, INavMeshAgent
 	{
 		[SerializeField] private Sinner _sinner;
 		[SerializeField] internal Transform walkableGround;
@@ -53,12 +53,12 @@ namespace NewOverlord
 			MoveNext(_nextPosition);
 		}
 
-		private void MoveNext(Vector3 nextPosition)
+		public void MoveNext(Vector3 nextPosition)
 		{
 			_sinner.agent.SetDestination(nextPosition);
 		}
 
-		private Vector3 FindNextPosition()
+		public Vector3 FindNextPosition()
 		{
 			_randomX = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius);
 			_randomZ = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius);

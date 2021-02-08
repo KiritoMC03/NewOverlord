@@ -13,12 +13,14 @@ namespace NewOverlord
         internal bool spellAlive = true;
 
         [SerializeField] protected float moveSpeed = 4f;
+        [SerializeField] protected float damage = 1f;
         [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
 
-        protected Vector3 errorTarget = new Vector3(-666, -666, -666);
         protected Transform _transform = null;
         protected Rigidbody _rigidbody = null;
         protected Vector3 scale = Vector3.zero;
+        protected Sinner tempSinner = null;
+        protected Vector3 errorTarget = new Vector3(-666, -666, -666);
 
         private void Awake()
         {
@@ -47,6 +49,7 @@ namespace NewOverlord
             _transform.position = target.position + offsetFromGround;
         }
 
+#region Utils
         virtual protected bool CheckTargetAndAliveAsTrue()
         {
             if (!spellAlive)
@@ -62,16 +65,28 @@ namespace NewOverlord
 
             return true;
         }
+#endregion
 
+#region CollisionAndTrigger
         virtual protected void OnCollisionEnter(Collision collision)
         {
-            if(collision.gameObject.GetComponent<Sinner>() != null)
+            tempSinner = collision.gameObject.GetComponent<Sinner>();
+            if (tempSinner != null)
             {
                 Destroy(gameObject);
-                Destroy(collision.gameObject);
+                tempSinner.GetDamage(damage);
             }
         }
+#endregion
 
+#region LifeAndDestroy
+        private void OnDestroy()
+        {
+            if (destroyRoutine != null)
+            {
+                StopCoroutine(destroyRoutine);
+            }
+        }
         IEnumerator DestroyRoutine(float delay)
         {
             yield return new WaitForSeconds(delay);
@@ -82,13 +97,6 @@ namespace NewOverlord
         {
             Destroy(gameObject);
         }
-
-        private void OnDestroy()
-        {
-            if (destroyRoutine != null)
-            {
-                StopCoroutine(destroyRoutine);
-            }
-        }
+#endregion
     }
 }
