@@ -11,6 +11,7 @@ namespace NewOverlord
         [SerializeField] private Transform player = null;
         [SerializeField] private float startSpeed = 0.3f;
         [SerializeField] private float flySpeed = 1f;
+        [SerializeField] private Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
 
         private Transform _transform = null;
         private Rigidbody _rigidbody = null;
@@ -37,7 +38,7 @@ namespace NewOverlord
             SetSpeed(tempVector3);
             yield return new WaitForSeconds(1f);
 
-            SetSpeed((player.position - _transform.position) * flySpeed);
+            SetSpeed((player.position + offsetFromGround - _transform.position) * flySpeed);
         }
 
         private void SetSpeed(Vector3 velocity)

@@ -48,7 +48,7 @@ namespace NewOverlord
             }
 
             _newCharge = Instantiate(charge, _transform.position, Quaternion.identity).GetComponent<Spell>();
-            _newCharge.target = _tempTarget;
+            _newCharge.SetTarget(_tempTarget);
         }
 
         private void AttackSinnerRaycast()

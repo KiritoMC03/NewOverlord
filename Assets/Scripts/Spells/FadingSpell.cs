@@ -14,7 +14,7 @@ namespace NewOverlord
             scaleStep = scale.x / 10;
         }
 
-        protected override void Destroy()
+        protected override void DestroySpell()
         {
             StartCoroutine(Fade());
         }

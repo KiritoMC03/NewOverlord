@@ -55,7 +55,7 @@ namespace NewOverlord
         virtual protected IEnumerator LifeTimerRoutine()
         {
             yield return new WaitForSeconds(lifeTime);
-            Destroy();
+            DestroySpell();
         }
 
         virtual protected IEnumerator DealDamageRoutine()
