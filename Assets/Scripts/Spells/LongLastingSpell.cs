@@ -10,14 +10,10 @@ namespace NewOverlord
 
         protected Coroutine lifeTimerRoutine = null;
         protected Coroutine dealDamageRoutine = null;
-        protected HashSet<Sinner> loggedSinners = new HashSet<Sinner>();
         
         private void Start()
         {
-            Set();
-            lifeTimerRoutine = StartCoroutine(LifeTimerRoutine());
-            dealDamageRoutine = StartCoroutine(DealDamageRoutine());
-            Debug.Log("dealDamageRoutine: " + dealDamageRoutine);
+            MakeStartJob();
         }
 
 #region CollisionAndTrigger
@@ -44,11 +40,22 @@ namespace NewOverlord
 #endregion
 
 #region LifeAndDestroy
-        private void OnDestroy()
+        protected virtual void MakeStartJob()
+        {
+            Debug.Log("MakeStartJob");
+            lifeTimerRoutine = StartCoroutine(LifeTimerRoutine());
+            dealDamageRoutine = StartCoroutine(DealDamageRoutine());
+        }
+
+        protected override void OnDestroy()
         {
             if (lifeTimerRoutine != null)
             {
                 StopCoroutine(lifeTimerRoutine);
+            }
+            if (dealDamageRoutine != null)
+            {
+                StopCoroutine(dealDamageRoutine);
             }
         }
 

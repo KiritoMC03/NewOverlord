@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace NewOverlord
 {
-    public class Absorb : FadingSpell
+    public class Absorb : LongLastingSpell
     {   
         internal override void SetTarget(Transform target)
         {

@@ -9697,6 +9697,7 @@ MonoBehaviour:
       m_Calls: []
   moveSpeed: 4
   damage: 80
+  destroyOnCollision: 1
   offsetFromGround: {x: 0, y: 0.2, z: 0}
   lifeTimeAfterCrash: 0.5
   scaleStep: 0.01
@@ -9711,7 +9712,7 @@ SphereCollider:
   m_GameObject: {fileID: 2825362940271391816}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.2
   m_Center: {x: 0, y: 0, z: 0}

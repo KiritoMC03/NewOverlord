@@ -19,6 +19,7 @@ namespace NewOverlord
 
         [SerializeField] protected float moveSpeed = 4f;
         [SerializeField] protected float damage = 1f;
+        [SerializeField] protected bool destroyOnCollision = true;
         [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
         [SerializeField] protected float lifeTimeAfterCrash = 0.5f;
 
@@ -26,6 +27,7 @@ namespace NewOverlord
         protected Rigidbody _rigidbody = null;
         protected Vector3 scale = Vector3.zero;
         protected Sinner tempSinner = null;
+        protected HashSet<Sinner> loggedSinners = new HashSet<Sinner>();
         protected Vector3 errorTarget = new Vector3(-666, -666, -666);
 
         private void Awake()
@@ -37,7 +39,7 @@ namespace NewOverlord
             checkTargetRoutine = StartCoroutine(CheckTargetRoutine());
         }
 
-        virtual protected void Move()
+        protected virtual void Move()
         {
             if (!CheckTargetAndAliveAsTrue())
             {
@@ -52,15 +54,13 @@ namespace NewOverlord
         /// </summary>
         /// <param name="fixedTarget">Цель.</param>
         /// <returns>Фиксированная цель.</returns>
-        virtual protected Vector3 MoveToFixedTarget(Vector3 fixedTarget)
+        protected virtual Vector3 MoveToFixedTarget(Vector3 fixedTarget)
         {
-            Debug.Log("_rigidbody.velocity: " + _rigidbody.velocity);
-
-            _rigidbody.velocity = (new Vector3(0,0,0) + offsetFromGround - _transform.position).normalized * moveSpeed * Time.fixedDeltaTime;
-            return new Vector3(0, 0, 0);
+            _rigidbody.velocity = (fixedTarget + offsetFromGround - _transform.position).normalized * moveSpeed * Time.fixedDeltaTime;
+            return fixedTarget;
         }
 
-        virtual protected void Set()
+        protected virtual void Set()
         {
             if (!CheckTargetAndAliveAsTrue())
             {
@@ -70,17 +70,17 @@ namespace NewOverlord
             _transform.position = target.position + offsetFromGround;
         }
 
-        #region Utils
-        virtual internal void SetTarget(Transform target)
+#region Utils
+        internal virtual void SetTarget(Transform target)
         {
             this.target = target;
         }
-        virtual internal void SetFixedTarget(Vector3 fixedTarget)
+        internal virtual void SetFixedTarget(Vector3 fixedTarget)
         {
             this.fixedTarget = fixedTarget;
         }
 
-        virtual protected bool CheckTargetAndAliveAsTrue()
+        protected virtual bool CheckTargetAndAliveAsTrue()
         {
             if (!spellAlive)
             {
@@ -93,12 +93,11 @@ namespace NewOverlord
             }
             return true;
         }
-        
-        virtual protected IEnumerator CheckTargetRoutine()
+
+        protected virtual IEnumerator CheckTargetRoutine()
         {
             while (true)
             {
-                //Debug.Log(target);
                 if(target != null)
                 {
                     TargetIsSet?.Invoke();
@@ -114,19 +113,22 @@ namespace NewOverlord
 #endregion
 
 #region CollisionAndTrigger
-        virtual protected void OnCollisionEnter(Collision collision)
+        protected virtual void OnCollisionEnter(Collision collision)
         {
             tempSinner = collision.gameObject.GetComponent<Sinner>();
             if (tempSinner != null)
             {
-                Destroy(gameObject);
+                if (destroyOnCollision)
+                {
+                    Destroy(gameObject);
+                }
                 tempSinner.GetDamage(damage);
             }
         }
 #endregion
 
 #region LifeAndDestroy
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
             if (destroyRoutine != null)
             {
@@ -139,11 +141,13 @@ namespace NewOverlord
         }
         IEnumerator DestroyRoutine(float delay)
         {
+            Debug.Log("DestroyRoutine - 1");
             yield return new WaitForSeconds(delay);
+            Debug.Log("DestroyRoutine - 2");
             DestroySpell();
         }
 
-        virtual protected void DestroySpell()
+        protected virtual void DestroySpell()
         {
             Destroy(gameObject);
         }

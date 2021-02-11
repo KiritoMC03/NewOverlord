@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace NewOverlord
@@ -6,18 +7,25 @@ namespace NewOverlord
     public class Player : MonoBehaviour
     {
         [SerializeField] internal Spell charge = null;
+        [SerializeField] internal float spellsCastDelay = 1f;
+        [SerializeField] internal float armSwingTime = 0.3f;
+        [SerializeField] internal Vector3 offsetToArm = new Vector3(0.1f, 2.1f, 8.75f);
 
         private Transform _transform = null;
         private Animator _animator;
         private Camera _mainCamera = null;
         private Spell _newCharge = null;
         private Transform _tempTarget = null;
+        private bool isWaitCastDelay = false;
+        private Coroutine waitCastDelayRoutine = null;
+        private Coroutine castSpellRoutine = null;
 
         private void Awake()
         {
             _transform = transform;
             _animator = GetComponent<Animator>();
             _mainCamera = Camera.main;
+            isWaitCastDelay = false;
         }
 
         void Update()
@@ -30,7 +38,6 @@ namespace NewOverlord
                 {
                     AttackSinner();
                     SetAnimation(true);
-                    _tempTarget = null;
                 }
             }
             else
@@ -46,9 +53,13 @@ namespace NewOverlord
             {
                 throw new Exception("Поле Charge не установлено.");
             }
+            else if (isWaitCastDelay)
+            {
+                return;
+            }
 
-            _newCharge = Instantiate(charge, _transform.position, Quaternion.identity).GetComponent<Spell>();
-            _newCharge.SetTarget(_tempTarget);
+            waitCastDelayRoutine = StartCoroutine(WaitCastDelayRoutine(spellsCastDelay));
+            castSpellRoutine = StartCoroutine(CastSpellRoutine(armSwingTime));
         }
 
         private void AttackSinnerRaycast()
@@ -62,6 +73,23 @@ namespace NewOverlord
                 }
             }
         }
+
+        private IEnumerator WaitCastDelayRoutine(float spellCastDelay)
+        {
+            isWaitCastDelay = true;
+            yield return new WaitForSeconds(spellCastDelay);
+            isWaitCastDelay = false;
+        }
+
+        private IEnumerator CastSpellRoutine(float armSwingTime)
+        {
+            yield return new WaitForSeconds(armSwingTime);
+
+            _newCharge = Instantiate(charge, offsetToArm, Quaternion.identity).GetComponent<Spell>();
+            _newCharge.SetTarget(_tempTarget);
+            _tempTarget = null;
+
+        }
 #endregion
 
 #region Animation
@@ -69,6 +97,18 @@ namespace NewOverlord
         {
             _animator.SetBool("IsAttack", cond);
         }
-#endregion
+        #endregion
+
+        private void OnDisable()
+        {
+            if(waitCastDelayRoutine != null)
+            {
+                StopCoroutine(waitCastDelayRoutine);
+            }
+            if(castSpellRoutine != null)
+            {
+                StopCoroutine(castSpellRoutine);
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace NewOverlord
 {
-    public class DeadCircle : LongLastingSpell
+    public class DeadCircle : FixedLongLastingSpell
     {
 
     }
