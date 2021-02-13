@@ -9698,7 +9698,7 @@ MonoBehaviour:
   moveSpeed: 4
   damage: 80
   destroyOnCollision: 1
-  offsetFromGround: {x: 0, y: 0.2, z: 0}
+  offsetFromGround: {x: 0, y: 0.6, z: 0}
   lifeTimeAfterCrash: 0.5
   scaleStep: 0.01
   fadingSpeed: 90

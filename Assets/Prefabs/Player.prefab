@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4684474259828368895}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4684474259828368895
 Transform:
@@ -30,7 +30,7 @@ Transform:
   - {fileID: 8928690990486135803}
   m_Father: {fileID: 5048568828252973800}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -31.162764, y: 10.791017, z: 19.295504}
 --- !u!1 &153770408354869667
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,12 +40,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4873720163937025329}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4873720163937025329
 Transform:
@@ -61,7 +61,7 @@ Transform:
   - {fileID: 4057696695838489935}
   m_Father: {fileID: 1122516852224540417}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.3274796, y: -1.2385148, z: -0.83017725}
 --- !u!1 &174259222124437936
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,12 +71,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4750129523729591694}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4750129523729591694
 Transform:
@@ -101,12 +101,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1641611614269143910}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1641611614269143910
 Transform:
@@ -122,7 +122,7 @@ Transform:
   - {fileID: 5545416526204062405}
   m_Father: {fileID: 6314940529549837233}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.393467, y: -10.701683, z: -7.1138096}
 --- !u!1 &781373659866352864
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,12 +132,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4481170328890845818}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4481170328890845818
 Transform:
@@ -153,7 +153,7 @@ Transform:
   - {fileID: 3514921574885107709}
   m_Father: {fileID: 470351725627735084}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.162096, y: 39.90918, z: 9.418363}
 --- !u!1 &1033999208519268475
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,12 +164,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3878962499293572429}
   - component: {fileID: 9115200398668910915}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_Upper_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3878962499293572429
 Transform:
@@ -311,12 +311,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5982873626908148506}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5982873626908148506
 Transform:
@@ -332,7 +332,7 @@ Transform:
   - {fileID: 566853327648940340}
   m_Father: {fileID: 7651662819325319650}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.26594067, y: -25.462065, z: 3.335241}
 --- !u!1 &1310130101006775288
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,12 +342,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7768732194301730180}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7768732194301730180
 Transform:
@@ -363,7 +363,7 @@ Transform:
   - {fileID: 4501814151213999597}
   m_Father: {fileID: 5753020134548864540}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.54291695, y: 0.06792541, z: 32.254112}
 --- !u!1 &1432945648197535835
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,12 +373,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1963620551948803725}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1963620551948803725
 Transform:
@@ -394,7 +394,7 @@ Transform:
   - {fileID: 4750129523729591694}
   m_Father: {fileID: 2740681908242192602}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.95750785, y: -0.48149434, z: 42.130154}
 --- !u!1 &1551716153828532104
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,12 +405,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2617077879983169783}
   - component: {fileID: 2863762481894990807}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_shoulder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2617077879983169783
 Transform:
@@ -492,12 +492,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2422237098475876723}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2422237098475876723
 Transform:
@@ -513,7 +513,7 @@ Transform:
   - {fileID: 1778546502859656469}
   m_Father: {fileID: 2577452836554002828}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.7983665, y: -18.585567, z: 3.1279993}
 --- !u!1 &1705660903898612646
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,12 +523,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4873145343230000735}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4873145343230000735
 Transform:
@@ -544,7 +544,7 @@ Transform:
   - {fileID: 6520995200037004285}
   m_Father: {fileID: 3514921574885107709}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -8.317856, y: -3.8713398, z: 14.781006}
 --- !u!1 &1774767811481926177
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,12 +554,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6196191589633864264}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6196191589633864264
 Transform:
@@ -575,7 +575,7 @@ Transform:
   - {fileID: 7317219326075392551}
   m_Father: {fileID: 2832392101638841447}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.9411926, y: -8.636337, z: 10.627913}
 --- !u!1 &2128831164327817520
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,12 +585,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8254345568163020502}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8254345568163020502
 Transform:
@@ -606,7 +606,7 @@ Transform:
   - {fileID: 3100147722161406933}
   m_Father: {fileID: 2832392101638841447}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.146759, y: 5.9134684, z: -7.269659}
 --- !u!1 &2142490675004263122
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,12 +617,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4246623620896753706}
   - component: {fileID: 8903737486264053176}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_lower_armor_horns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4246623620896753706
 Transform:
@@ -716,12 +716,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3100147722161406933}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3100147722161406933
 Transform:
@@ -737,7 +737,7 @@ Transform:
   - {fileID: 4371297519428382476}
   m_Father: {fileID: 8254345568163020502}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.7317296, y: -0.040499046, z: -26.146357}
 --- !u!1 &2184257015192116092
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,12 +747,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6768139028144787018}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6768139028144787018
 Transform:
@@ -768,7 +768,7 @@ Transform:
   - {fileID: 1885904791978160421}
   m_Father: {fileID: 6520995200037004285}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.1939366, y: 0.16078353, z: 46.274426}
 --- !u!1 &2257561325463810680
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,12 +778,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4312229620665977179}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4312229620665977179
 Transform:
@@ -799,7 +799,7 @@ Transform:
   - {fileID: 7667607191350755147}
   m_Father: {fileID: 5048568828252973800}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.1920595, y: -0.115658045, z: 2.961428}
 --- !u!1 &2258987427380228069
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,12 +809,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7468922573941332920}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7468922573941332920
 Transform:
@@ -830,7 +830,7 @@ Transform:
   - {fileID: 5911457607334781398}
   m_Father: {fileID: 8442829921757695980}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.22123364, y: 0.13419458, z: -18.037004}
 --- !u!1 &2290448390815487674
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,12 +840,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3930357221614186235}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3930357221614186235
 Transform:
@@ -861,7 +861,7 @@ Transform:
   - {fileID: 10781240201441669}
   m_Father: {fileID: 2832392101638841447}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.8304586, y: 0.050587893, z: 4.853337}
 --- !u!1 &2552001461126981978
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,12 +871,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7667607191350755147}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7667607191350755147
 Transform:
@@ -892,7 +892,7 @@ Transform:
   - {fileID: 6314940529549837233}
   m_Father: {fileID: 4312229620665977179}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.434085, y: -0.022871494, z: 5.5875683}
 --- !u!1 &2892972812202537804
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,12 +902,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4501814151213999597}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4501814151213999597
 Transform:
@@ -932,12 +932,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911457607334781398}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5911457607334781398
 Transform:
@@ -953,7 +953,7 @@ Transform:
   - {fileID: 7968786268618802609}
   m_Father: {fileID: 7468922573941332920}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.39837295, y: 0.051324796, z: -23.254932}
 --- !u!1 &2956712998791711230
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,12 +963,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8728558642170938399}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8728558642170938399
 Transform:
@@ -993,12 +993,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3225233040829999831}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3225233040829999831
 Transform:
@@ -1014,7 +1014,7 @@ Transform:
   - {fileID: 6059810306790590712}
   m_Father: {fileID: 466309695311804264}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.0692613, y: -0.14482932, z: -36.831306}
 --- !u!1 &3221264211106771096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,12 +1024,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7755218937901250539}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7755218937901250539
 Transform:
@@ -1055,12 +1055,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7759209283839118503}
   - component: {fileID: 415734910945130265}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_shoulder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7759209283839118503
 Transform:
@@ -1142,12 +1142,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317219326075392551}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7317219326075392551
 Transform:
@@ -1163,7 +1163,7 @@ Transform:
   - {fileID: 1850871875431956854}
   m_Father: {fileID: 6196191589633864264}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.3489184, y: 15.855188, z: -4.0543523}
 --- !u!1 &3660529773178089430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,12 +1173,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1885904791978160421}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1885904791978160421
 Transform:
@@ -1203,12 +1203,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470351725627735084}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &470351725627735084
 Transform:
@@ -1224,7 +1224,7 @@ Transform:
   - {fileID: 4481170328890845818}
   m_Father: {fileID: 9072004930817856276}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -22.24938, y: -8.722935, z: 61.52041}
 --- !u!1 &3971818489314559856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,12 +1234,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8064564002475317507}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8064564002475317507
 Transform:
@@ -1255,7 +1255,7 @@ Transform:
   - {fileID: 3708782061983363985}
   m_Father: {fileID: 8928690990486135803}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -19.142357, y: -3.246028, z: -18.857536}
 --- !u!1 &4224720179506157093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,12 +1265,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2361921407373098711}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2361921407373098711
 Transform:
@@ -1286,7 +1286,7 @@ Transform:
   - {fileID: 5435762953235200122}
   m_Father: {fileID: 3514921574885107709}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.527613, y: -3.9935918, z: 0.47868955}
 --- !u!1 &4310264857090892507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,12 +1296,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5048568828252973800}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5048568828252973800
 Transform:
@@ -1319,7 +1319,7 @@ Transform:
   - {fileID: 4312229620665977179}
   m_Father: {fileID: 5073585583050763745}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.5872822, y: 58.336723, z: -4.1948533}
 --- !u!1 &4644751471631273716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,12 +1329,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566853327648940340}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &566853327648940340
 Transform:
@@ -1359,12 +1359,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2577452836554002828}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2577452836554002828
 Transform:
@@ -1380,7 +1380,7 @@ Transform:
   - {fileID: 2422237098475876723}
   m_Father: {fileID: 3514921574885107709}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.8161433, y: 7.452773, z: -8.467383}
 --- !u!1 &4848785565274430805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,12 +1390,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778546502859656469}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1778546502859656469
 Transform:
@@ -1411,7 +1411,7 @@ Transform:
   - {fileID: 7072435204512544305}
   m_Father: {fileID: 2422237098475876723}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.011200171, y: -1.4846911, z: -2.6415129}
 --- !u!1 &5112445219945860727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,12 +1421,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6312943556459965946}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6312943556459965946
 Transform:
@@ -1442,7 +1442,7 @@ Transform:
   - {fileID: 2740681908242192602}
   m_Father: {fileID: 3514921574885107709}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.118115, y: -5.725383, z: 15.759806}
 --- !u!1 &5166512291714057378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,12 +1452,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7651662819325319650}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7651662819325319650
 Transform:
@@ -1473,7 +1473,7 @@ Transform:
   - {fileID: 5982873626908148506}
   m_Father: {fileID: 6314940529549837233}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -19.439308, y: -26.694176, z: -2.5626545}
 --- !u!1 &5174536945109968735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,12 +1483,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3514921574885107709}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3514921574885107709
 Transform:
@@ -1508,7 +1508,7 @@ Transform:
   - {fileID: 2577452836554002828}
   m_Father: {fileID: 4481170328890845818}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.042767, y: -6.6925063, z: -16.75462}
 --- !u!1 &5254467606105973835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,12 +1518,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5753020134548864540}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5753020134548864540
 Transform:
@@ -1539,7 +1539,7 @@ Transform:
   - {fileID: 7768732194301730180}
   m_Father: {fileID: 424124348897713510}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.49083477, y: 0.062069714, z: 31.104362}
 --- !u!1 &5368609494270962537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,12 +1549,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466309695311804264}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &466309695311804264
 Transform:
@@ -1570,7 +1570,7 @@ Transform:
   - {fileID: 3225233040829999831}
   m_Father: {fileID: 2832392101638841447}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -25.995577, y: 9.342142, z: -12.388629}
 --- !u!1 &5486563968738569226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,12 +1580,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850871875431956854}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1850871875431956854
 Transform:
@@ -1601,7 +1601,7 @@ Transform:
   - {fileID: 8842721556649662457}
   m_Father: {fileID: 7317219326075392551}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.9611359, y: 13.141399, z: 8.100615}
 --- !u!1 &5558338696966109019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,12 +1612,16 @@ GameObject:
   m_Component:
   - component: {fileID: 5073585583050763745}
   - component: {fileID: 398447211952864559}
-  m_Layer: 0
+  - component: {fileID: 8806811610312275908}
+  - component: {fileID: 1785943854235121465}
+  - component: {fileID: 1785943854235121462}
+  - component: {fileID: 1785943854235121461}
+  m_Layer: 13
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5073585583050763745
 Transform:
@@ -1654,7 +1658,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b16f4a6991615439c2a8b0ed1b27c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charge: {fileID: -1914340916601320366, guid: 28f850018fbab7c43af300f6eb4845ac, type: 3}
+  charge: {fileID: 5338117462769669128, guid: 538b6e3bfd64a7445af5c05fc95f4140, type: 3}
+  spellsCastDelay: 1
+  armSwingTime: 0.3
+  offsetToArm: {x: 0.1, y: 2.1, z: 8.75}
+--- !u!114 &8806811610312275908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558338696966109019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e3474357d7174fae2fcc567cd0ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1785943854235121465
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558338696966109019}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1785943854235121462
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558338696966109019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!95 &1785943854235121461
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558338696966109019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec90c549d7a9b0444a34a1742ae70e6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5574256139359421781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,12 +1732,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10781240201441669}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &10781240201441669
 Transform:
@@ -1685,7 +1753,7 @@ Transform:
   - {fileID: 209045136199446339}
   m_Father: {fileID: 3930357221614186235}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.76194125, y: 0.39387903, z: -26.87912}
 --- !u!1 &5691023221443337128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,12 +1763,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6784666177146285203}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6784666177146285203
 Transform:
@@ -1725,12 +1793,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3708782061983363985}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3708782061983363985
 Transform:
@@ -1746,7 +1814,7 @@ Transform:
   - {fileID: 8728558642170938399}
   m_Father: {fileID: 8064564002475317507}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.3226939, y: 0.9973558, z: 0.8315728}
 --- !u!1 &5916316623779849916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,12 +1824,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7856090680598477839}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7856090680598477839
 Transform:
@@ -1786,12 +1854,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5435762953235200122}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5435762953235200122
 Transform:
@@ -1807,7 +1875,7 @@ Transform:
   - {fileID: 7287055951308174615}
   m_Father: {fileID: 2361921407373098711}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.630492, y: -0.4608207, z: 29.896051}
 --- !u!1 &6013727758517637655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,12 +1885,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2832392101638841447}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2832392101638841447
 Transform:
@@ -1842,7 +1910,7 @@ Transform:
   - {fileID: 6196191589633864264}
   m_Father: {fileID: 8727807020156183953}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.4792614, y: -15.10165, z: 10.8875475}
 --- !u!1 &6050473674845481568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,12 +1920,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9072004930817856276}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9072004930817856276
 Transform:
@@ -1873,7 +1941,7 @@ Transform:
   - {fileID: 470351725627735084}
   m_Father: {fileID: 6314940529549837233}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.096356, y: 11.576501, z: 8.439091}
 --- !u!1 &6283979446959109194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,12 +1951,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1122516852224540417}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1122516852224540417
 Transform:
@@ -1904,7 +1972,7 @@ Transform:
   - {fileID: 4873720163937025329}
   m_Father: {fileID: 5556507692068249957}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10.0533, y: 2.8914149, z: 7.203296}
 --- !u!1 &6465750992932714931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,12 +1982,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5556507692068249957}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5556507692068249957
 Transform:
@@ -1935,7 +2003,7 @@ Transform:
   - {fileID: 1122516852224540417}
   m_Father: {fileID: 8279246894381335903}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 41.938313, y: 9.773537, z: 16.226736}
 --- !u!1 &6473043999138218256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,12 +2013,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 424124348897713510}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &424124348897713510
 Transform:
@@ -1966,7 +2034,7 @@ Transform:
   - {fileID: 5753020134548864540}
   m_Father: {fileID: 3514921574885107709}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.736251, y: -5.888486, z: -11.49926}
 --- !u!1 &6584636692955262169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,12 +2044,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8279246894381335903}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8279246894381335903
 Transform:
@@ -1997,7 +2065,7 @@ Transform:
   - {fileID: 5556507692068249957}
   m_Father: {fileID: 5048568828252973800}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -33.31613, y: -13.081703, z: -16.103626}
 --- !u!1 &6717900367479675640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,12 +2075,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6520995200037004285}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6520995200037004285
 Transform:
@@ -2028,7 +2096,7 @@ Transform:
   - {fileID: 6768139028144787018}
   m_Father: {fileID: 4873145343230000735}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.1479306, y: 0.1540254, z: 46.577076}
 --- !u!1 &6827154965002813550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,12 +2106,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7072435204512544305}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7072435204512544305
 Transform:
@@ -2068,12 +2136,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4371297519428382476}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4371297519428382476
 Transform:
@@ -2089,7 +2157,7 @@ Transform:
   - {fileID: 6784666177146285203}
   m_Father: {fileID: 3100147722161406933}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.9896937, y: 0.35775942, z: -33.250153}
 --- !u!1 &6892817399533392656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,12 +2168,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4044150412754614866}
   - component: {fileID: 5195165111362566568}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_Lower_shoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044150412754614866
 Transform:
@@ -2196,12 +2264,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1329757403235473159}
   - component: {fileID: 2125952569201096953}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_shoulder_rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1329757403235473159
 Transform:
@@ -2285,12 +2353,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209045136199446339}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &209045136199446339
 Transform:
@@ -2306,7 +2374,7 @@ Transform:
   - {fileID: 7755218937901250539}
   m_Father: {fileID: 10781240201441669}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.4345499, y: -0.27564746, z: -39.025627}
 --- !u!1 &7327442708085914275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,12 +2384,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7287055951308174615}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7287055951308174615
 Transform:
@@ -2337,7 +2405,7 @@ Transform:
   - {fileID: 7856090680598477839}
   m_Father: {fileID: 5435762953235200122}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.3359565, y: 0.063025236, z: 44.340355}
 --- !u!1 &7380257014435699601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,12 +2416,12 @@ GameObject:
   m_Component:
   - component: {fileID: 967699094262738341}
   - component: {fileID: 47953818861170131}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_Eyes_ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &967699094262738341
 Transform:
@@ -2439,12 +2507,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5830606860162328039}
   - component: {fileID: 2067013138541251210}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LP_upper_cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5830606860162328039
 Transform:
@@ -2544,12 +2612,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8842721556649662457}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8842721556649662457
 Transform:
@@ -2574,12 +2642,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4057696695838489935}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4057696695838489935
 Transform:
@@ -2604,12 +2672,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7968786268618802609}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7968786268618802609
 Transform:
@@ -2634,12 +2702,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2740681908242192602}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2740681908242192602
 Transform:
@@ -2655,7 +2723,7 @@ Transform:
   - {fileID: 1963620551948803725}
   m_Father: {fileID: 6312943556459965946}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.6388619, y: -0.056581795, z: 30.120012}
 --- !u!1 &8375337541515448398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,12 +2733,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8727807020156183953}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8727807020156183953
 Transform:
@@ -2686,7 +2754,7 @@ Transform:
   - {fileID: 2832392101638841447}
   m_Father: {fileID: 5545416526204062405}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.035027, y: -110.873886, z: -38.81368}
 --- !u!1 &8495487880171409373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,12 +2764,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6314940529549837233}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6314940529549837233
 Transform:
@@ -2719,7 +2787,7 @@ Transform:
   - {fileID: 1641611614269143910}
   m_Father: {fileID: 7667607191350755147}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.456558, y: -0.022986174, z: 5.587064}
 --- !u!1 &8691356726063259898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,12 +2797,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8928690990486135803}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8928690990486135803
 Transform:
@@ -2750,7 +2818,7 @@ Transform:
   - {fileID: 8064564002475317507}
   m_Father: {fileID: 4684474259828368895}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 46.51546, y: -3.4213085, z: 4.94557}
 --- !u!1 &8971503774050120674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,12 +2828,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5545416526204062405}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5545416526204062405
 Transform:
@@ -2781,7 +2849,7 @@ Transform:
   - {fileID: 8727807020156183953}
   m_Father: {fileID: 1641611614269143910}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -37.783493, y: 30.72127, z: -72.650185}
 --- !u!1 &8974462434662854593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,12 +2859,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8442829921757695980}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8442829921757695980
 Transform:
@@ -2812,7 +2880,7 @@ Transform:
   - {fileID: 7468922573941332920}
   m_Father: {fileID: 2832392101638841447}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 21.9979, y: -0.1868577, z: 11.980219}
 --- !u!1 &8992506970008680265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,12 +2890,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6059810306790590712}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6059810306790590712
 Transform:
@@ -2843,7 +2911,7 @@ Transform:
   - {fileID: 5485457762374297988}
   m_Father: {fileID: 3225233040829999831}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.106334, y: -0.15816638, z: -36.45746}
 --- !u!1 &9170269577766929425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,12 +2921,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5485457762374297988}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RightHandPinky4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5485457762374297988
 Transform:

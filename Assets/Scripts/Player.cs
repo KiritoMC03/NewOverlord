@@ -6,7 +6,7 @@ namespace NewOverlord
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] internal Spell charge = null;
+        [SerializeField] internal Spell currentSpell = null;
         [SerializeField] internal float spellsCastDelay = 1f;
         [SerializeField] internal float armSwingTime = 0.3f;
         [SerializeField] internal Vector3 offsetToArm = new Vector3(0.1f, 2.1f, 8.75f);
@@ -49,7 +49,7 @@ namespace NewOverlord
 #region AttackWork
         private void AttackSinner()
         {
-            if (charge == null)
+            if (currentSpell == null)
             {
                 throw new Exception("Поле Charge не установлено.");
             }
@@ -85,7 +85,7 @@ namespace NewOverlord
         {
             yield return new WaitForSeconds(armSwingTime);
 
-            _newCharge = Instantiate(charge, offsetToArm, Quaternion.identity).GetComponent<Spell>();
+            _newCharge = Instantiate(currentSpell, offsetToArm, Quaternion.identity).GetComponent<Spell>();
             _newCharge.SetTarget(_tempTarget);
             _tempTarget = null;
 
