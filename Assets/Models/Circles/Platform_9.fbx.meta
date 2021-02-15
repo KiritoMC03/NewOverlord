@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8bebfb276d8e734cb9b64a2af3e809c
+guid: a6de3348cf3aafd4482d9bd493d01048
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: UMesh_PM3D_Cylinder3D6_9
-    second: {fileID: 2100000, guid: 83739dea4ce682f43955d6df87d86f0e, type: 2}
+      name: "\u041C\u0430\u0442\u0435\u0440\u0438\u0430\u043B.010"
+    second: {fileID: 2100000, guid: af5a665b668bb0c46a4832e960c5d724, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,7 +39,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1000
+    globalScale: 1500
     meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -90,7 +90,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 10
+    globalScale: 15
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

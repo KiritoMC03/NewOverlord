@@ -141,9 +141,7 @@ namespace NewOverlord
         }
         IEnumerator DestroyRoutine(float delay)
         {
-            Debug.Log("DestroyRoutine - 1");
             yield return new WaitForSeconds(delay);
-            Debug.Log("DestroyRoutine - 2");
             DestroySpell();
         }
 

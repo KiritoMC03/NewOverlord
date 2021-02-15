@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,13 +9,15 @@ namespace NewOverlord
     public class Sinner : MonoBehaviour, IDamageable, IMortal
     {
         [SerializeField] internal float soulCapacity = 100f;
-        [SerializeField] protected GameObject soulEffect = null;
+        [SerializeField] internal GameObject soulEffect = null;
+        [SerializeField] internal GameObject cloakOfDeath = null;
         [SerializeField] protected Soul soul = null;
         [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
 
         internal NavMeshAgent agent = null;
         private Transform _transform;
         private Coroutine disableSoulEffectRoutine = null;
+        private Coroutine getLastLassingDamageRoutine = null;
 
 
         private void Awake()
@@ -25,7 +27,7 @@ namespace NewOverlord
             gameObject.layer = 10; // Sinners
         }
 
-#region MoveWork
+        #region MoveWork
         public void FindNextPosition()
         {
 
@@ -37,8 +39,14 @@ namespace NewOverlord
         }
         #endregion
 
-#region DamageWork
+        #region DamageWork
         public void GetDamage(float damage)
+        {
+            CheckSoulCapacity();
+            soulCapacity -= damage;
+            EnableSoulEffectForTime();
+        }
+        public void GetLastLassingDamage(float damage)
         {
             CheckSoulCapacity();
             soulCapacity -= damage;
@@ -55,7 +63,7 @@ namespace NewOverlord
 
         public void Die()
         {
-            if(disableSoulEffectRoutine != null)
+            if (disableSoulEffectRoutine != null)
             {
                 StopCoroutine(disableSoulEffectRoutine);
             }
@@ -82,6 +90,28 @@ namespace NewOverlord
         {
             yield return new WaitForSeconds(2f);
             soulEffect.SetActive(false);
+        }
+        #endregion
+
+        #region GettersSetters
+        internal GameObject GetCloakOfDeath()
+        {
+            if (cloakOfDeath != null)
+            {
+                return cloakOfDeath;
+            }
+
+            throw new ArgumentNullException("CloakOfDeath не установлен.");
+        }
+
+        internal GameObject GetSoulEffect()
+        {
+            if (soulEffect != null)
+            {
+                return soulEffect;
+            }
+
+            throw new ArgumentNullException("SoulEffect не установлен.");
         }
         #endregion
     }
