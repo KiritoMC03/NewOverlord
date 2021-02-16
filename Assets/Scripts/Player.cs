@@ -15,6 +15,7 @@ namespace NewOverlord
         private Animator _animator;
         private Camera _mainCamera = null;
         private Spell _newCharge = null;
+        private Mana manaHandler = null;
         private Transform _tempTarget = null;
         private bool isWaitCastDelay = false;
         private Coroutine waitCastDelayRoutine = null;
@@ -25,19 +26,33 @@ namespace NewOverlord
             _transform = transform;
             _animator = GetComponent<Animator>();
             _mainCamera = Camera.main;
+            manaHandler = GetComponent<Mana>();
             isWaitCastDelay = false;
+
+            if (manaHandler == null)
+            {
+                Debug.LogWarning("Рекомендуется добавить компонент Mana!");
+            }
         }
 
         void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
-                AttackSinnerRaycast();
-
-                if(_tempTarget != null)
+                if (manaHandler.Get() < currentSpell.GetManaCost())
                 {
-                    AttackSinner();
-                    SetAnimation(true);
+                    
+                }
+                else
+                {
+                    manaHandler.Spend(currentSpell.GetManaCost()); 
+                    AttackSinnerRaycast();
+
+                    if (_tempTarget != null)
+                    {
+                        AttackSinner();
+                        SetAnimation(true);
+                    }
                 }
             }
             else
@@ -99,6 +114,9 @@ namespace NewOverlord
         }
         #endregion
 
+#region GettersSetters
+
+#endregion
         private void OnDisable()
         {
             if(waitCastDelayRoutine != null)

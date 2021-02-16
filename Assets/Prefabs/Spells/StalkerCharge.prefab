@@ -9697,6 +9697,8 @@ MonoBehaviour:
       m_Calls: []
   moveSpeed: 240
   damage: 25
+  manaCost: 20
+  destroyOnCollision: 1
   offsetFromGround: {x: 0, y: 1, z: 0}
   lifeTimeAfterCrash: 0.5
   scaleStep: 0.1

@@ -19,6 +19,7 @@ namespace NewOverlord
 
         [SerializeField] protected float moveSpeed = 4f;
         [SerializeField] protected float damage = 1f;
+        [SerializeField] protected float manaCost = 10f;
         [SerializeField] protected bool destroyOnCollision = true;
         [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
         [SerializeField] protected float lifeTimeAfterCrash = 0.5f;
@@ -150,5 +151,10 @@ namespace NewOverlord
             Destroy(gameObject);
         }
 #endregion
+
+        public float GetManaCost()
+        {
+            return manaCost;
+        }
     }
 }

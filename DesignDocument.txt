@@ -39,3 +39,6 @@
 - Overlord of the underworld;
 - New demon lord;
 - Highest demon;
+
+-- ToDo: из лавы вылезают черви (мини-босс)
+-- ToDo: сделать ограничение передвижения
