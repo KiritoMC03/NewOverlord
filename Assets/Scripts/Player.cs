@@ -41,11 +41,10 @@ namespace NewOverlord
             {
                 if (manaHandler.Get() < currentSpell.GetManaCost())
                 {
-                    
+
                 }
                 else
                 {
-                    manaHandler.Spend(currentSpell.GetManaCost()); 
                     AttackSinnerRaycast();
 
                     if (_tempTarget != null)
@@ -73,6 +72,7 @@ namespace NewOverlord
                 return;
             }
 
+            manaHandler.Spend(currentSpell.GetManaCost());
             waitCastDelayRoutine = StartCoroutine(WaitCastDelayRoutine(spellsCastDelay));
             castSpellRoutine = StartCoroutine(CastSpellRoutine(armSwingTime));
         }
