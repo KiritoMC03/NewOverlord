@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.7
+      scalar: 0.7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -600,7 +600,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1488,8 +1488,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: -0.5
+      scalar: 0.3
+      minScalar: -0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1541,8 +1541,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 1.7
+      scalar: 0.7
+      minScalar: 1.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1594,8 +1594,8 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: -0.5
+      scalar: 0.3
+      minScalar: -0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4821,10 +4821,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9171998232851643656}
+  - component: {fileID: 8702012970485937761}
+  - component: {fileID: 8702012970485937762}
   - component: {fileID: 8702012970485937763}
   - component: {fileID: 8702012970485937788}
-  - component: {fileID: 8702012970485937762}
-  - component: {fileID: 8702012970485937761}
   - component: {fileID: 8702012970485937760}
   m_Layer: 10
   m_Name: Pigman
@@ -4851,6 +4851,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8702012970485937761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359432290363877298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d89b025eb94c054cbd97d27010fbe78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulCapacity: 100
+  soulEffect: {fileID: 5792308345525693296}
+  cloakOfDeath: {fileID: 8968335530150654825}
+  soul: {fileID: 5657458913187397393, guid: 22c5bca20f7181f4ead8c7ef4cc96ef2, type: 3}
+  offsetFromGround: {x: 0, y: 1, z: 0}
+--- !u!114 &8702012970485937762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359432290363877298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc49cfb578d52ca448a890c62e7dac66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sinner: {fileID: 8702012970485937761}
+  walkableGround: {fileID: 0}
+  _walkableGroundRadius: 7
 --- !u!136 &8702012970485937763
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4884,37 +4916,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8702012970485937762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359432290363877298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc49cfb578d52ca448a890c62e7dac66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sinner: {fileID: 8702012970485937761}
-  walkableGround: {fileID: 0}
-  _walkableGroundRadius: 7
---- !u!114 &8702012970485937761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359432290363877298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d89b025eb94c054cbd97d27010fbe78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soulCapacity: 100
-  soulEffect: {fileID: 5792308345525693296}
-  soul: {fileID: 5657458913187397393, guid: 22c5bca20f7181f4ead8c7ef4cc96ef2, type: 3}
-  offsetFromGround: {x: 0, y: 1, z: 0}
 --- !u!195 &8702012970485937760
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6275,8 +6276,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1537847547875763164}
+  - component: {fileID: 868913891760691586}
   - component: {fileID: 4223518311192326151}
   - component: {fileID: 5316185114967798037}
+  - component: {fileID: 5064544519462152518}
+  - component: {fileID: 3982267411622206529}
   m_Layer: 10
   m_Name: CloakOfDeath
   m_TagString: Untagged
@@ -6292,12 +6296,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8968335530150654825}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.122, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9171998232851643656}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &868913891760691586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968335530150654825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d389bcb17d86c3947a76b72a06202995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerTick: 5
+  damageTicksCount: 10
+  damageTicksDelay: 0.5
+  selfSinner: {fileID: 8702012970485937761}
 --- !u!198 &4223518311192326151
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -6866,7 +6886,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 60
+    maxNumParticles: 30
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -7131,7 +7151,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 50
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -7569,12 +7589,12 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.050980393, g: 0.09019608, b: 0.0627451, a: 0.7058824}
+        key0: {r: 0.050980393, g: 0.09019608, b: 0.0627451, a: 1}
         key1: {r: 0.16740833, g: 0.3584906, b: 0.2351337, a: 1}
         key2: {r: 0.5764706, g: 0.99607843, b: 0.6392157, a: 0.7058824}
         key3: {r: 0.16740833, g: 0.3584906, b: 0.2351337, a: 1}
         key4: {r: 0.050980393, g: 0.09019608, b: 0.0627451, a: 0.7058824}
-        key5: {r: 0.050980393, g: 0.09019608, b: 0.0627451, a: 0}
+        key5: {r: 0.050980393, g: 0.09019608, b: 0.0627451, a: 0.7058824}
         key6: {r: 0.050980393, g: 0.09019608, b: 0.0627451, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 6554
@@ -7586,11 +7606,11 @@ ParticleSystem:
         ctime6: 65535
         ctime7: 0
         atime0: 0
-        atime1: 9830
+        atime1: 14264
         atime2: 32768
         atime3: 55705
         atime4: 65535
-        atime5: 0
+        atime5: 65535
         atime6: 0
         atime7: 0
         m_Mode: 0
@@ -8334,7 +8354,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    inWorldSpace: 0
+    inWorldSpace: 1
   InheritVelocityModule:
     enabled: 0
     m_Mode: 0
@@ -11079,3 +11099,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!135 &5064544519462152518
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968335530150654825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3982267411622206529
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968335530150654825}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

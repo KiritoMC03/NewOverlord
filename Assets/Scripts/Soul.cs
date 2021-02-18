@@ -53,10 +53,8 @@ namespace NewOverlord
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("TriggerEnter");
             if (other.transform.tag == "Player")
             {
-                Debug.Log("GetComponent<Player>()");
                 Destroy(gameObject);
             }
         }

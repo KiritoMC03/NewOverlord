@@ -24,6 +24,7 @@ namespace NewOverlord
             bar = bar.GetComponent<Slider>();
             bar.minValue = 0;
             bar.maxValue = max;
+            StartCoroutine(ManaRegenRoutine());
         }
 
         private IEnumerator ManaRegenRoutine()

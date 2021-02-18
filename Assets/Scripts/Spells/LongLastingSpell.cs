@@ -42,7 +42,6 @@ namespace NewOverlord
 #region LifeAndDestroy
         protected virtual void MakeStartJob()
         {
-            Debug.Log("MakeStartJob");
             lifeTimerRoutine = StartCoroutine(LifeTimerRoutine());
             dealDamageRoutine = StartCoroutine(DealDamageRoutine());
         }

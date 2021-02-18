@@ -4,34 +4,31 @@ using UnityEngine;
 
 namespace NewOverlord
 {
-    [RequireComponent(typeof(Collider))]
-    public class CloakOfDeathSpell : FixedLongLastingSpell
+    public class CloakOfDeathSpell : LongLastingSpell
     {
-        private Collider triggerCollider = null;
+        protected Sinner targetSinner = null;
 
 #region LifeAndDestroy
         protected override void MakeStartJob()
         {
             base.MakeStartJob();
-            triggerCollider = GetComponent<Collider>();
-            
-            if(triggerCollider != null)
+            _transform.localScale = Vector3.zero;
+            _rigidbody.isKinematic = true;
+
+            targetSinner = target.GetComponent<Sinner>();
+            if(targetSinner != null)
             {
-                triggerCollider.isTrigger = true;
+                targetSinner?.cloakOfDeath.SetActive(true);
             }
         }
 
-        protected override void OnTriggerEnter(Collider other)
+        protected override IEnumerator LifeTimerRoutine()
         {
-            tempSinner = other.GetComponent<Sinner>();
-            if (tempSinner != null)
+            yield return new WaitForSeconds(lifeTime);
+            if (targetSinner != null)
             {
-                tempSinner.GetCloakOfDeath().SetActive(true);
+                targetSinner?.cloakOfDeath.SetActive(false);
             }
-        }
-
-        protected override void OnTriggerExit(Collider other)
-        {
             DestroySpell();
         }
         #endregion
