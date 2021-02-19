@@ -4,11 +4,8 @@ using UnityEngine;
 
 namespace NewOverlord
 {
-    public class SpellMenu : MonoBehaviour
+    public class SpellMenu : Menu
     {
-        public void OpenClose()
-        {
-            gameObject.SetActive(!gameObject.activeInHierarchy);
-        }
+		
     }
 }
