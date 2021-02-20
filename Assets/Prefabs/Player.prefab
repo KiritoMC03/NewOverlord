@@ -1614,6 +1614,7 @@ GameObject:
   - component: {fileID: 398447211952864559}
   - component: {fileID: 8806811610312275908}
   - component: {fileID: 6773023123104342759}
+  - component: {fileID: 6191286072958320755}
   - component: {fileID: 1785943854235121465}
   - component: {fileID: 1785943854235121462}
   - component: {fileID: 1785943854235121461}
@@ -1677,9 +1678,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spells:
+  - {fileID: 4345928715118382277, guid: f310c2dab6bbb1b4bb3d4e57d913ba86, type: 3}
   - {fileID: 8194148519771865595, guid: 97c0ead03d5be174a89c2f8e7ef6acd1, type: 3}
-  - {fileID: -1914340916601320366, guid: 28f850018fbab7c43af300f6eb4845ac, type: 3}
   - {fileID: 5338117462769669128, guid: 538b6e3bfd64a7445af5c05fc95f4140, type: 3}
+  - {fileID: -1914340916601320366, guid: 28f850018fbab7c43af300f6eb4845ac, type: 3}
+  - {fileID: -6380347722395721384, guid: f1c5ddb166ca96447aac7909aa58d597, type: 3}
 --- !u!114 &6773023123104342759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,8 +1698,20 @@ MonoBehaviour:
   bar: {fileID: 0}
   value: 100
   max: 100
-  regenSpeed: 1
+  regenSpeed: 10
   regenValue: 5
+--- !u!114 &6191286072958320755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558338696966109019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e0c5807e854954d9c20f18be2962b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1785943854235121465
 Rigidbody:
   m_ObjectHideFlags: 0

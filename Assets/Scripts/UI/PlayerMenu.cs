@@ -7,6 +7,8 @@ namespace NewOverlord
 {
     public class PlayerMenu : Menu
     {
+        [SerializeField] private Stats playerStats = null;
+        [Header("Stats:")]
         [SerializeField] private Text rang = null;
         [SerializeField] private Text attackMultiplier = null;
         [SerializeField] private Text strength = null;
@@ -28,12 +30,12 @@ namespace NewOverlord
 
         private void SetText()
         {
-            rang.text = rangText + "Lord";
-            attackMultiplier.text = attackMultiplierText + 1.3f;
-            strength.text = strengthText + 120;
-            soulsCount.text = soulsCountText + 100;
-            nextRang.text = nextRangText + "Diablo";
-            needSouls.text = needSoulsText + 1000;
+            rang.text = rangText + playerStats.GetRang();
+            attackMultiplier.text = attackMultiplierText + playerStats.GetAttackMultiplier();
+            strength.text = strengthText + playerStats.GetStrength();
+            soulsCount.text = soulsCountText + playerStats.GetSoulCount();
+            nextRang.text = nextRangText + playerStats.GetNextRang();
+            needSouls.text = needSoulsText + playerStats.GetNeedSoul();
         }
     }
 }

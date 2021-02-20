@@ -45,18 +45,5 @@ namespace NewOverlord
         {
             _rigidbody.velocity = velocity;
         }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.transform.tag == "Player")
-            {
-                Destroy(gameObject);
-            }
-        }
     }
 }
