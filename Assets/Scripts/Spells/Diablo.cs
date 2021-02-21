@@ -8,6 +8,11 @@ namespace NewOverlord
 
         internal override void SetTarget(Transform target)
         {
+            if(target == null)
+            {
+                return;
+            }
+
             this.target = target;
             SetFixedTarget(this.target.position);
             MoveToFixedTarget(fixedTarget);

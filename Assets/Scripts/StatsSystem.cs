@@ -85,5 +85,10 @@ namespace NewOverlord
             }
             return rangList[level + 1];
         }
+
+        public int GetNeedSoul(int targetLevel)
+        {
+            return levels[targetLevel];
+        }
     }
 }

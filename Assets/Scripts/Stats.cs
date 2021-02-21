@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,11 +20,17 @@ namespace NewOverlord
 
         private void Awake()
         {
+            CalculateStats();
+        }
+
+        private void CalculateStats()
+        {
             rang = statsSystem.GetRang(level);
             attackMultiplier = Mathf.Sqrt(level + 1f);
             strength = (level + 1) * 10;
+            needSouls = statsSystem.GetNeedSoul(level + 1);
 
-            if(level == 50)
+            if (level == 50)
             {
                 nextRang = "";
             }
@@ -39,7 +46,7 @@ namespace NewOverlord
         }
         public float GetAttackMultiplier()
         {
-            return attackMultiplier;
+            return (float)Math.Round(Convert.ToDouble(attackMultiplier), 1);
         }
         public int GetStrength()
         {
@@ -69,6 +76,16 @@ namespace NewOverlord
             {
                 AddSoul();
                 Destroy(other.gameObject);
+            }
+        }
+
+        public void LevelUp()
+        {
+            if(soulsCount >= needSouls)
+            {
+                soulsCount -= needSouls;
+                level++;
+                CalculateStats();
             }
         }
     }
