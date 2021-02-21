@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace NewOverlord
 {
@@ -17,6 +19,7 @@ namespace NewOverlord
         internal Coroutine checkTargetRoutine = null;
         internal bool spellAlive = true;
 
+        [SerializeField] internal Image icon = null;
         [SerializeField] protected float moveSpeed = 4f;
         [SerializeField] protected float damage = 1f;
         [SerializeField] protected float manaCost = 10f;
@@ -155,6 +158,24 @@ namespace NewOverlord
         public float GetManaCost()
         {
             return manaCost;
+        }
+
+        public Image GetIconImage()
+        {
+            if(icon == null)
+            {
+                throw new Exception("Не установленно поле Icon.");
+            }
+            return icon;
+        }
+
+        public Sprite GetIconSprite()
+        {
+            if (icon == null)
+            {
+                throw new Exception("Не установленно поле Icon.");
+            }
+            return icon.sprite;
         }
     }
 }

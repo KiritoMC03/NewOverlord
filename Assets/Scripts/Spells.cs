@@ -1,18 +1,21 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace NewOverlord
 {
     [RequireComponent(typeof(Player))]
     public class Spells : MonoBehaviour
     {
-        [SerializeField] private Spell[] spells;
-
+        [SerializeField] private SpellManager spellManager = null;
+        
         private Player player = null;
+        private Spell[] spells = null;
 
         private void Awake()
         {
             player = GetComponent<Player>();
+            spells = spellManager.GetAllSpells();
         }
 
         /// <summary>
