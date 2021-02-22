@@ -4882,7 +4882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sinner: {fileID: 8702012970485937761}
   walkableGround: {fileID: 0}
-  _walkableGroundRadius: 7
+  _walkableGroundRadius: 4
 --- !u!136 &8702012970485937763
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4937,7 +4937,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &8652183192380674177
 GameObject:
   m_ObjectHideFlags: 0

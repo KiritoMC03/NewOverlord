@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 namespace NewOverlord
@@ -7,7 +6,8 @@ namespace NewOverlord
     public class SpellLayout : MonoBehaviour
     {
         [SerializeField] private SpellManager spellManager = null;
-        [SerializeField] private LayoutItem layoutItemPrefab = null;
+        [SerializeField] private SpellLayoutItem layoutItemPrefab = null;
+        [SerializeField] private Sprite lockIcon = null;
 
         private Spell[] spells = null;
         private Transform _transform = null;
@@ -20,16 +20,29 @@ namespace NewOverlord
             {
                 spells = spellManager.GetAllSpells();
             }
-
-            
         }
 
         private void Start()
         {
             for (int i = 0; i < spells.Length; i++)
             {
-                LayoutItem tempItem = Instantiate(layoutItemPrefab, _transform);
-                tempItem.SetSpellIcon(spells[i].GetIconSprite());
+                SpellLayoutItem tempItem = Instantiate(layoutItemPrefab, _transform);
+
+                if (spells[i].GetNeedLevel() > Stats.GetLevel())
+                {
+                    if (lockIcon != null)
+                    {
+                        tempItem.SetSpellIcon(lockIcon);
+                    }
+                    else
+                    {
+                        throw new Exception("Не установленно поле Lock Icon.");
+                    }
+                }
+                else
+                {
+                    tempItem.SetSpellIcon(spells[i].GetIconSprite());
+                }
             }
         }
     }

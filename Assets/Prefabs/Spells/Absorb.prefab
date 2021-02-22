@@ -4941,14 +4941,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   icon: {fileID: 2302544202491647150}
+  needLevel: 0
   moveSpeed: 200
   damage: 15
   manaCost: 10
+  lifeTimeAfterCrash: 0.5
   destroyOnCollision: 0
   offsetFromGround: {x: 0, y: 1, z: 0}
-  lifeTimeAfterCrash: 0.5
   scaleStep: 0.1
   fadingSpeed: 60
+  fadingParts:
+  - {fileID: 2825362940271391924}
+  - {fileID: 7414360761043210841}
   lifeTime: 2.5
 --- !u!135 &2825362940271391927
 SphereCollider:

@@ -8,8 +8,9 @@ namespace NewOverlord
 
         internal override void SetTarget(Transform target)
         {
-            if(target == null)
+            if (target == null)
             {
+                Destroy(gameObject);
                 return;
             }
 

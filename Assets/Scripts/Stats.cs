@@ -9,7 +9,7 @@ namespace NewOverlord
     public class Stats : MonoBehaviour
     {
         [SerializeField] private StatsSystem statsSystem = null;
-        [SerializeField] private int level = 0;
+        [SerializeField] static private int playerLevel = 0;
 
         private string rang = null;
         private float attackMultiplier = 0f;
@@ -25,19 +25,24 @@ namespace NewOverlord
 
         private void CalculateStats()
         {
-            rang = statsSystem.GetRang(level);
-            attackMultiplier = Mathf.Sqrt(level + 1f);
-            strength = (level + 1) * 10;
-            needSouls = statsSystem.GetNeedSoul(level + 1);
+            rang = statsSystem.GetRang(playerLevel);
+            attackMultiplier = Mathf.Sqrt(playerLevel + 1f);
+            strength = (playerLevel + 1) * 10;
+            needSouls = statsSystem.GetNeedSoul(playerLevel + 1);
 
-            if (level == 50)
+            if (playerLevel == 50)
             {
                 nextRang = "";
             }
             else
             {
-                nextRang = statsSystem.GetRang(level + 1);
+                nextRang = statsSystem.GetRang(playerLevel + 1);
             }
+        }
+
+        static public int GetLevel()
+        {
+            return playerLevel;
         }
 
         public string GetRang()
@@ -84,7 +89,7 @@ namespace NewOverlord
             if(soulsCount >= needSouls)
             {
                 soulsCount -= needSouls;
-                level++;
+                playerLevel++;
                 CalculateStats();
             }
         }

@@ -15,7 +15,10 @@ namespace NewOverlord
 
 		private Transform _transform;
 		private Vector3 _nextPosition = new Vector3();
+		private Vector3 _tempPosition = new Vector3();
 
+		private float _tempRandom = 0f;
+		private float _randomPosition = 0;
 		private float _randomX = 0;
 		private float _randomZ = 0;
 
@@ -60,10 +63,13 @@ namespace NewOverlord
 
 		public Vector3 FindNextPosition()
 		{
-			_randomX = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius);
-			_randomZ = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius);
+			_tempRandom = UnityEngine.Random.Range(-1f, 1f);
+			_randomX = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius) / Mathf.Cos(_tempRandom);
+			_randomZ = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius) / Mathf.Cos(_tempRandom);
+			_tempPosition.Set(_randomX, 0, _randomZ);
 
-			return new Vector3(_randomX, 0, _randomZ);
+			Debug.Log(_tempPosition);
+			return _tempPosition;
 		}
 	}
 }

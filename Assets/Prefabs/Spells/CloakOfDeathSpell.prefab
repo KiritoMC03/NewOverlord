@@ -154,12 +154,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   icon: {fileID: 1869742769893522684}
+  needLevel: 1
   moveSpeed: 4
   damage: 1
   manaCost: 10
+  lifeTimeAfterCrash: 0.5
   destroyOnCollision: 1
   offsetFromGround: {x: 0, y: 1, z: 0}
-  lifeTimeAfterCrash: 0.5
   scaleStep: 0.1
   fadingSpeed: 60
   lifeTime: 5

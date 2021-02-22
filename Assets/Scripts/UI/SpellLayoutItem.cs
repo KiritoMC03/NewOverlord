@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace NewOverlord
 {
-    public class LayoutItem : MonoBehaviour
+    public class SpellLayoutItem : MonoBehaviour
     {
         [SerializeField] private Image spellIcon = null;
 

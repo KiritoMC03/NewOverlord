@@ -20,12 +20,13 @@ namespace NewOverlord
         internal bool spellAlive = true;
 
         [SerializeField] internal Image icon = null;
+        [SerializeField] protected int needLevel = 0;
         [SerializeField] protected float moveSpeed = 4f;
         [SerializeField] protected float damage = 1f;
         [SerializeField] protected float manaCost = 10f;
+        [SerializeField] protected float lifeTimeAfterCrash = 0.5f;
         [SerializeField] protected bool destroyOnCollision = true;
         [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
-        [SerializeField] protected float lifeTimeAfterCrash = 0.5f;
 
         protected Transform _transform = null;
         protected Rigidbody _rigidbody = null;
@@ -77,6 +78,12 @@ namespace NewOverlord
 #region Utils
         internal virtual void SetTarget(Transform target)
         {
+            if (target == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             this.target = target;
         }
         internal virtual void SetFixedTarget(Vector3 fixedTarget)
@@ -176,6 +183,11 @@ namespace NewOverlord
                 throw new Exception("Не установленно поле Icon.");
             }
             return icon.sprite;
+        }
+        
+        public int GetNeedLevel()
+        {
+            return needLevel;
         }
     }
 }
