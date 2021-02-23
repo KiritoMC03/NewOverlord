@@ -33,6 +33,7 @@ namespace NewOverlord
         protected Vector3 scale = Vector3.zero;
         protected Sinner tempSinner = null;
         protected HashSet<Sinner> loggedSinners = new HashSet<Sinner>();
+        protected HashSet<Sinner> tempLoggedSinners = new HashSet<Sinner>();
         protected Vector3 errorTarget = new Vector3(-666, -666, -666);
 
         private void Awake()

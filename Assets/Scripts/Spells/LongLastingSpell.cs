@@ -70,7 +70,13 @@ namespace NewOverlord
             {
                 foreach (var sinner in loggedSinners)
                 {
-                    if (sinner != null)
+                    if (!sinner.gameObject.activeInHierarchy)
+                    {
+                        loggedSinners.Remove(sinner);
+                        break;
+                    }
+
+                    if (sinner != null && sinner.gameObject.activeInHierarchy)
                     {
                         sinner.GetDamage(damage / 10);
                     }

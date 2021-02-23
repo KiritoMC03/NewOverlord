@@ -1388,8 +1388,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e26f541c7e111a4baa6b4e9d0a7fbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 4294967295
-  sinner: {fileID: 8359432290363877298, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9, type: 3}
+  objectType: 0
+  count: 1000
+  sinner: {fileID: 8702012970485937761, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9, type: 3}
   _spread: 5
   speed: 0.1
   walkableGround: {fileID: 1647757023}
@@ -1630,6 +1631,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631791408}
   m_CullTransparentMesh: 0
+--- !u!1 &658618550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658618551}
+  - component: {fileID: 658618552}
+  m_Layer: 0
+  m_Name: ObjectsPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658618551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658618550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1156048324}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658618552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658618550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8c477a10253a9489b76ac4f30e8f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectInfo:
+  - Type: 0
+    Prefab: {fileID: 8359432290363877298, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9,
+      type: 3}
+    StartCount: 1
+  - Type: 1
+    Prefab: {fileID: 4902811997474330813, guid: 22c5bca20f7181f4ead8c7ef4cc96ef2,
+      type: 3}
+    StartCount: 1
 --- !u!1 &693485364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,6 +3511,7 @@ Transform:
   - {fileID: 1047049365}
   - {fileID: 136782589}
   - {fileID: 1053330861}
+  - {fileID: 658618551}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

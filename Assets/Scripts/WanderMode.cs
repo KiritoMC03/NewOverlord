@@ -68,8 +68,13 @@ namespace NewOverlord
 			_randomZ = UnityEngine.Random.Range(-_walkableGroundRadius, _walkableGroundRadius) / Mathf.Cos(_tempRandom);
 			_tempPosition.Set(_randomX, 0, _randomZ);
 
-			Debug.Log(_tempPosition);
 			return _tempPosition;
+		}
+
+		private void OnEnable()
+		{
+			_nextPosition = _transform.localPosition;
+			UpdateMoveAgent();
 		}
 	}
 }

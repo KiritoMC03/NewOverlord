@@ -9,8 +9,9 @@ namespace NewOverlord
     {
         internal HashSet<GameObject> spawnedCreatures = new HashSet<GameObject>();
 
+        [SerializeField] ObjectPooler.ObjectInfo.ObjectType objectType;
         [SerializeField] internal uint count = 3;
-        [SerializeField] internal GameObject sinner;
+        [SerializeField] internal Sinner sinner;
         [SerializeField] private float _spread = 5f;
         [Range(0.1f, 5f)]
         [SerializeField] internal float speed = 0.5f;
@@ -34,7 +35,31 @@ namespace NewOverlord
                 throw new Exception("Поле Walkable Ground не установлено!");
             }
         }
+        void Start()
+        {
+            _spawnerRoutine = StartCoroutine(Spawner());
+        }
 
+        IEnumerator Spawner()
+        {
+            if (sinner == null)
+            {
+                throw new Exception("Поле Creature или Area не установлено!");
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                tempSinner = ObjectPooler.Instance.GetObject(objectType).GetComponent<WanderMode>();
+
+                if (tempSinner != null)
+                {
+                    tempSinner.walkableGround = walkableGround;
+                }
+                yield return new WaitForSeconds(speed);
+            }
+        }
+
+        /*
         void Start()
         {
             _spawnerRoutine = StartCoroutine(Spawner());
@@ -58,5 +83,6 @@ namespace NewOverlord
                 yield return new WaitForSeconds(speed);
             }
         }
+        */
     }
 }
