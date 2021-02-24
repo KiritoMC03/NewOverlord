@@ -76,7 +76,7 @@ namespace NewOverlord
                 StopCoroutine(disableSoulEffectRoutine);
             }
 
-            Debug.Log("Die! PreSpawn!");
+            //Debug.Log("Die! PreSpawn!");
             SpawnSoul();
             ObjectPooler.Instance.DestroyObject(gameObject);
         }
@@ -91,8 +91,10 @@ namespace NewOverlord
 
         private void EnableSoulEffectForTime()
         {
+            Debug.Log("EnableSoulEffectForTime");
             if (gameObject.activeInHierarchy)
             {
+                Debug.Log("(gameObject.activeInHierarchy)");
                 soulEffect.SetActive(true);
                 disableSoulEffectRoutine = StartCoroutine(DisableSoulEffectRoutine());
             }
@@ -142,6 +144,8 @@ namespace NewOverlord
             {
                 StopCoroutine(getLastLassingDamageRoutine);
             }
+
+            soulEffect.SetActive(false);
         }
 
         private void OnEnable()

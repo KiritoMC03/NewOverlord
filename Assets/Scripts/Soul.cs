@@ -12,6 +12,7 @@ namespace NewOverlord
         [SerializeField] private float startSpeed = 0.3f;
         [SerializeField] private float flySpeed = 1f;
         [SerializeField] private Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
+        [SerializeField] ObjectPooler.ObjectInfo.ObjectType objectPoolerType = ObjectPooler.ObjectInfo.ObjectType.Soul;
 
         private Transform _transform = null;
         private Rigidbody _rigidbody = null;
@@ -32,6 +33,11 @@ namespace NewOverlord
             StartCoroutine(Fly());
         }
 
+        internal void Spawn()
+        {
+            var tempSoul = ObjectPooler.Instance.GetObject(objectPoolerType);
+        }
+
         private IEnumerator Fly()
         {
             tempVector3.Set(0, startSpeed, 0);
@@ -44,6 +50,17 @@ namespace NewOverlord
         private void SetSpeed(Vector3 velocity)
         {
             _rigidbody.velocity = velocity;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            var tempStats = other.GetComponent<Stats>();
+            if (tempStats != null)
+            {
+                tempStats.AddSoul();
+                ObjectPooler.Instance.DestroyObject(gameObject);
+                // Destroy(gameObject);
+            }
         }
     }
 }

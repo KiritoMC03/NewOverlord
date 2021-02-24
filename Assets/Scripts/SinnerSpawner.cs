@@ -13,7 +13,7 @@ namespace NewOverlord
         [SerializeField] internal uint count = 3;
         [SerializeField] internal Sinner sinner;
         [SerializeField] private float _spread = 5f;
-        [Range(0.1f, 5f)]
+        [Range(0.02f, 500f)]
         [SerializeField] internal float speed = 0.5f;
         [SerializeField] private Transform walkableGround;
 
@@ -56,6 +56,19 @@ namespace NewOverlord
                     tempSinner.walkableGround = walkableGround;
                 }
                 yield return new WaitForSeconds(speed);
+            }
+        }
+
+        private void OnEnable()
+        {
+            _spawnerRoutine = StartCoroutine(Spawner());
+        }
+
+        private void OnDisable()
+        {
+            if (_spawnerRoutine != null)
+            {
+                StopCoroutine(_spawnerRoutine);
             }
         }
 

@@ -1389,10 +1389,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 0
-  count: 1000
+  count: 4294967295
   sinner: {fileID: 8702012970485937761, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9, type: 3}
   _spread: 5
-  speed: 0.1
+  speed: 0.02
   walkableGround: {fileID: 1647757023}
 --- !u!4 &535487524
 Transform:

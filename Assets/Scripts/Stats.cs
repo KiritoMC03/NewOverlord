@@ -70,18 +70,9 @@ namespace NewOverlord
             return nextRang;
         }
 
-        private void AddSoul()
+        internal void AddSoul()
         {
             soulsCount++;
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.GetComponent<Soul>() != null)
-            {
-                AddSoul();
-                Destroy(other.gameObject);
-            }
         }
 
         public void LevelUp()
