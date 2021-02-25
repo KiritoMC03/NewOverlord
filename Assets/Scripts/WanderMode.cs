@@ -10,7 +10,7 @@ namespace NewOverlord
 	public class WanderMode : MonoBehaviour, INavMeshAgent
 	{
 		[SerializeField] private Sinner _sinner;
-		[SerializeField] internal Transform walkableGround;
+		[SerializeField] private Transform walkableGround;
 		[SerializeField] private float _walkableGroundRadius = 1f;
 
 		private Transform _transform;
@@ -69,6 +69,14 @@ namespace NewOverlord
 			_tempPosition.Set(_randomX, 0, _randomZ);
 
 			return _tempPosition;
+		}
+
+		internal void SetWalkableGround(Transform ground)
+        {
+			if (ground != null)
+			{
+				walkableGround = ground.transform;
+			}
 		}
 
 		private void OnEnable()

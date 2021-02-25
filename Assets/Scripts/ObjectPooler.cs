@@ -7,9 +7,14 @@ namespace NewOverlord
     public class ObjectPooler : MonoBehaviour
     {
         [SerializeField] internal static ObjectPooler Instance = null;
-        [SerializeField] private List<ObjectInfo> objectInfo;
+        [SerializeField] private List<ObjectInfo> objectsInfo;
 
         private Dictionary<ObjectInfo.ObjectType, Pool> pools;
+        private GameObject emptyGameObject = null;
+        private GameObject tempContainer = null;
+        private GameObject tempStartGameObject = null;
+        private GameObject tempInstantiateGameObject = null;
+        private GameObject tempGetGameObject = null;
 
         [Serializable]
         public struct ObjectInfo
@@ -26,10 +31,13 @@ namespace NewOverlord
 
         private void Awake()
         {
-            if(Instance == null)
+            emptyGameObject = new GameObject();
+
+            if (Instance == null)
             {
                 Instance = this;
             }
+
             InitPool();
         }
 
@@ -37,39 +45,42 @@ namespace NewOverlord
         {
             pools = new Dictionary<ObjectInfo.ObjectType, Pool>();
 
-            var emptyGameObject = new GameObject();
-
-            foreach (var obj in objectInfo)
+            foreach (var obj in objectsInfo)
             {
-                var container = Instantiate(emptyGameObject, transform, false);
-                container.name = obj.Type.ToString();
+                tempContainer = Instantiate(emptyGameObject, transform, false);
+                tempContainer.name = obj.Type.ToString() + "_Pool";
 
-                pools[obj.Type] = new Pool(container.transform);
+                pools[obj.Type] = new Pool(tempContainer.transform);
 
                 for (int i = 0; i < obj.StartCount; i++)
                 {
-                    var tempGameObject = InstantiateObject(obj.Type, container.transform);
-                    pools[obj.Type].objects.Enqueue(tempGameObject);
+                    tempStartGameObject = InstantiateObject(obj.Type, tempContainer.transform);
+                    pools[obj.Type].objects.Enqueue(tempStartGameObject);
                 }
             }
-            Debug.Log("objectInfo: " + objectInfo.Count);
-            Debug.Log("pools: " + pools.Count);
+            // Debug.Log("objectInfo: " + objectsInfo.Count);
+            // Debug.Log("pools: " + pools.Count);
             Destroy(emptyGameObject);
         }
 
         private GameObject InstantiateObject(ObjectInfo.ObjectType type, Transform parent)
         {
-            var tempGameObject = Instantiate(objectInfo.Find(x => x.Type == type).Prefab, parent);
-            tempGameObject.SetActive(false);
-            return tempGameObject;
+            tempInstantiateGameObject = Instantiate(objectsInfo.Find(elem => elem.Type == type).Prefab, parent);
+            tempInstantiateGameObject.SetActive(false);
+            return tempInstantiateGameObject;
         }
 
         public GameObject GetObject(ObjectInfo.ObjectType type)
         {
-            var obj = pools[type].objects.Count > 0 ?
+            var obj = (pools[type].objects.Count > 0) ?
                 pools[type].objects.Dequeue() : InstantiateObject(type, pools[type].container);
 
             obj.SetActive(true);
+            if(obj == null)
+            {
+                throw new Exception("obj = null");
+            }
+            Debug.Log("obj - " + obj);
             return obj;
         }
 

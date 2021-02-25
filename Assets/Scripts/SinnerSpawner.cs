@@ -9,7 +9,7 @@ namespace NewOverlord
     {
         internal HashSet<GameObject> spawnedCreatures = new HashSet<GameObject>();
 
-        [SerializeField] ObjectPooler.ObjectInfo.ObjectType objectType;
+        [SerializeField] private ObjectPooler.ObjectInfo.ObjectType objectPoolerType = ObjectPooler.ObjectInfo.ObjectType.Sinner;
         [SerializeField] internal uint count = 3;
         [SerializeField] internal Sinner sinner;
         [SerializeField] private float _spread = 5f;
@@ -49,11 +49,15 @@ namespace NewOverlord
 
             for (int i = 0; i < count; i++)
             {
-                tempSinner = ObjectPooler.Instance.GetObject(objectType).GetComponent<WanderMode>();
+                if (ObjectPooler.Instance == null)
+                {
+                    yield return new WaitForSeconds(speed);
+                }
+                tempSinner = ObjectPooler.Instance.GetObject(objectPoolerType).GetComponent<WanderMode>();
 
                 if (tempSinner != null)
                 {
-                    tempSinner.walkableGround = walkableGround;
+                    tempSinner.SetWalkableGround(walkableGround);
                 }
                 yield return new WaitForSeconds(speed);
             }

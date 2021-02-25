@@ -6,17 +6,20 @@ namespace NewOverlord
 {
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(Collider))]
-    public class Soul : MonoBehaviour
+    public class Soul : MonoBehaviour, IPooledObject
     {
+        public ObjectPooler.ObjectInfo.ObjectType Type => objectPoolerType;
+
         [SerializeField] private Transform player = null;
         [SerializeField] private float startSpeed = 0.3f;
         [SerializeField] private float flySpeed = 1f;
         [SerializeField] private Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
-        [SerializeField] ObjectPooler.ObjectInfo.ObjectType objectPoolerType = ObjectPooler.ObjectInfo.ObjectType.Soul;
+        [SerializeField] private ObjectPooler.ObjectInfo.ObjectType objectPoolerType = ObjectPooler.ObjectInfo.ObjectType.Soul;
 
         private Transform _transform = null;
         private Rigidbody _rigidbody = null;
         private Vector3 tempVector3 = Vector3.zero;
+
 
         private void Awake()
         {
@@ -31,11 +34,6 @@ namespace NewOverlord
         private void Start()
         {
             StartCoroutine(Fly());
-        }
-
-        internal void Spawn()
-        {
-            var tempSoul = ObjectPooler.Instance.GetObject(objectPoolerType);
         }
 
         private IEnumerator Fly()

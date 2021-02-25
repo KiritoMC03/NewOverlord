@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace NewOverlord
 {
-    public class Pool : MonoBehaviour
+    public class Pool
     {
-        [SerializeField] internal Transform container { get; set; }
-        [SerializeField] internal Queue<GameObject> objects = null;
+        internal Transform container { get; set; }
+        internal Queue<GameObject> objects = null;
 
         public Pool(Transform container)
         {

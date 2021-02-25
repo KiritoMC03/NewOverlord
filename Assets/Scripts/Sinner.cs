@@ -8,6 +8,9 @@ namespace NewOverlord
     [RequireComponent(typeof(NavMeshAgent))]
     public class Sinner : MonoBehaviour, IDamageable, IMortal, IPooledObject
     {
+        public ObjectPooler.ObjectInfo.ObjectType Type => type;
+        [SerializeField] ObjectPooler.ObjectInfo.ObjectType type = ObjectPooler.ObjectInfo.ObjectType.Sinner;
+
         [SerializeField] ObjectPooler.ObjectInfo.ObjectType soulType;
         [SerializeField] internal float soulCapacity = 100f;
         [SerializeField] internal GameObject soulEffect = null;
@@ -21,8 +24,6 @@ namespace NewOverlord
         private Coroutine getLastLassingDamageRoutine = null;
         private bool mayGetDamage = true;
 
-        public ObjectPooler.ObjectInfo.ObjectType Type => type;
-        [SerializeField] ObjectPooler.ObjectInfo.ObjectType type;
 
         private void Awake()
         {
