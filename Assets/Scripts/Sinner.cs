@@ -9,20 +9,25 @@ namespace NewOverlord
     public class Sinner : MonoBehaviour, IDamageable, IMortal, IPooledObject
     {
         public ObjectPooler.ObjectInfo.ObjectType Type => type;
-        [SerializeField] ObjectPooler.ObjectInfo.ObjectType type = ObjectPooler.ObjectInfo.ObjectType.Sinner;
 
-        [SerializeField] ObjectPooler.ObjectInfo.ObjectType soulType;
-        [SerializeField] internal float soulCapacity = 100f;
+        [SerializeField] private ObjectPooler.ObjectInfo.ObjectType type = ObjectPooler.ObjectInfo.ObjectType.Sinner;
+        [SerializeField] private ObjectPooler.ObjectInfo.ObjectType soulType;
         [SerializeField] internal GameObject soulEffect = null;
         [SerializeField] internal GameObject cloakOfDeath = null;
-        [SerializeField] protected Soul soul = null;
-        [SerializeField] protected Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
+        [SerializeField] private Soul soul = null;
+        [SerializeField] private Vector3 offsetFromGround = new Vector3(0f, 1f, 0f);
+        [SerializeField] internal float soulCapacity = 100f;
+        [SerializeField] private float startNonDamageDelay = 3f;
 
         internal NavMeshAgent agent = null;
+
         private Transform _transform;
         private Coroutine disableSoulEffectRoutine = null;
         private Coroutine getLastLassingDamageRoutine = null;
+        private Coroutine nonDamageableRoutine = null;
         private bool mayGetDamage = true;
+        
+        private static uint count = 0;
 
 
         private void Awake()
@@ -44,7 +49,7 @@ namespace NewOverlord
         }
         #endregion
 
-        #region DamageWork
+#region DamageWork
         public void GetDamage(float damage)
         {
             if (!mayGetDamage) return;
@@ -104,6 +109,13 @@ namespace NewOverlord
             yield return new WaitForSeconds(2f);
             soulEffect.SetActive(false);
         }
+
+        private IEnumerator NonDamageableRoutine(float delay)
+        {
+            mayGetDamage = false;
+            yield return new WaitForSeconds(delay);
+            mayGetDamage = true;
+        }
         #endregion
 
         #region GettersSetters
@@ -130,6 +142,8 @@ namespace NewOverlord
 
         private void OnDisable()
         {
+            StopAllCoroutines();
+            /*
             if(disableSoulEffectRoutine != null)
             {
                 StopCoroutine(disableSoulEffectRoutine);
@@ -140,12 +154,41 @@ namespace NewOverlord
                 StopCoroutine(getLastLassingDamageRoutine);
             }
 
+            if (getLastLassingDamageRoutine != null)
+            {
+                StopCoroutine(getLastLassingDamageRoutine);
+            }
+            */
             soulEffect.SetActive(false);
+            DecreaseCount(1);
         }
 
         private void OnEnable()
         {
             mayGetDamage = true;
+            IncreaseCount(1);
+            nonDamageableRoutine = StartCoroutine(NonDamageableRoutine(startNonDamageDelay));
+        }
+
+        private void IncreaseCount(uint value)
+        {
+            count += value;
+        }
+        private void DecreaseCount(uint value)
+        {
+            count -= value;
+        }
+
+        public static uint GetSinnersCount()
+        {
+            if(count < 0)
+            {
+                return (count = 0);
+            }
+            else
+            {
+                return count;
+            }
         }
     }
 }

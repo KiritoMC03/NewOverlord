@@ -37,5 +37,10 @@ namespace NewOverlord
             nextRang.text = nextRangText + playerStats.GetNextRang();
             needSouls.text = needSoulsText + playerStats.GetNeedSoul();
         }
+
+        private void OnEnable()
+        {
+            SetText();
+        }
     }
 }

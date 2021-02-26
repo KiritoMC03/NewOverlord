@@ -11,6 +11,7 @@ namespace NewOverlord
 
         [SerializeField] private ObjectPooler.ObjectInfo.ObjectType objectPoolerType = ObjectPooler.ObjectInfo.ObjectType.Sinner;
         [SerializeField] internal uint count = 3;
+        [SerializeField] internal uint maxCount = 0;
         [SerializeField] internal Sinner sinner;
         [SerializeField] private float _spread = 5f;
         [Range(0.02f, 500f)]
@@ -45,12 +46,18 @@ namespace NewOverlord
 
             for (int i = 0; i < count; i++)
             {
+                if(Sinner.GetSinnersCount() >= maxCount)
+                {
+                    Debug.Log("SinnersCount: " + Sinner.GetSinnersCount());
+                    yield return new WaitForSeconds(speed);
+                    continue;
+                }
                 if (ObjectPooler.Instance == null)
                 {
                     yield return new WaitForSeconds(speed);
                 }
-                tempSinner = ObjectPooler.Instance.GetObject(objectPoolerType).GetComponent<WanderMode>();
 
+                tempSinner = ObjectPooler.Instance.GetObject(objectPoolerType).GetComponent<WanderMode>();
                 if (tempSinner != null)
                 {
                     tempSinner.SetWalkableGround(walkableGround);

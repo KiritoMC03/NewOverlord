@@ -1393,6 +1393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPoolerType: 0
   count: 4294967295
+  maxCount: 10
   sinner: {fileID: 8702012970485937761, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9, type: 3}
   _spread: 5
   speed: 1
@@ -1681,11 +1682,11 @@ MonoBehaviour:
   - Type: 0
     Prefab: {fileID: 8359432290363877298, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9,
       type: 3}
-    StartCount: 100
+    StartCount: 10
   - Type: 1
     Prefab: {fileID: 4902811997474330813, guid: 22c5bca20f7181f4ead8c7ef4cc96ef2,
       type: 3}
-    StartCount: 50
+    StartCount: 5
 --- !u!1 &693485364
 GameObject:
   m_ObjectHideFlags: 0

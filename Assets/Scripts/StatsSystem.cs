@@ -88,7 +88,7 @@ namespace NewOverlord
             {
                 throw new ArgumentOutOfRangeException("Значение уровня слишком высоко.");
             }
-            return rangList[level + 1];
+            return rangList[level];
         }
 
         public int GetNeedSoul(int targetLevel)

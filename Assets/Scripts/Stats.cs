@@ -9,7 +9,6 @@ namespace NewOverlord
     public class Stats : MonoBehaviour
     {
         [SerializeField] private StatsSystem statsSystem = null;
-        [SerializeField] static private int playerLevel = 0;
 
         private string rang = null;
         private float attackMultiplier = 0f;
@@ -17,6 +16,7 @@ namespace NewOverlord
         private int soulsCount = 0;
         private int needSouls = 0;
         private string nextRang = null;
+        static private int playerLevel = 0;
 
         private void Awake()
         {
