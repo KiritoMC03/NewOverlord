@@ -4865,11 +4865,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   soulType: 1
-  soulCapacity: 100
   soulEffect: {fileID: 5792308345525693296}
   cloakOfDeath: {fileID: 8968335530150654825}
   soul: {fileID: 5657458913187397393, guid: 22c5bca20f7181f4ead8c7ef4cc96ef2, type: 3}
   offsetFromGround: {x: 0, y: 1, z: 0}
+  soulCapacity: 100
   startNonDamageDelay: 3
 --- !u!114 &8702012970485937762
 MonoBehaviour:
