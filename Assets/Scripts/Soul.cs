@@ -19,6 +19,8 @@ namespace NewOverlord
         private Transform _transform = null;
         private Rigidbody _rigidbody = null;
         private Vector3 tempVector3 = Vector3.zero;
+        private Vector3 zeroVelocity = Vector3.zero;
+        private Coroutine flyRotine = null;
 
 
         private void Awake()
@@ -33,10 +35,10 @@ namespace NewOverlord
 
         private void Start()
         {
-            StartCoroutine(Fly());
+            flyRotine = StartCoroutine(FlyRoutine());
         }
 
-        private IEnumerator Fly()
+        private IEnumerator FlyRoutine()
         {
             tempVector3.Set(0, startSpeed, 0);
             SetSpeed(tempVector3);
@@ -58,6 +60,21 @@ namespace NewOverlord
                 tempStats.AddSoul();
                 ObjectPooler.Instance.DestroyObject(gameObject);
                 // Destroy(gameObject);
+            }
+        }
+
+        private void OnEnable()
+        {
+            flyRotine = StartCoroutine(FlyRoutine());
+        }
+
+        private void OnDisable()
+        {
+            _rigidbody.velocity = zeroVelocity;
+            
+            if(flyRotine != null)
+            {
+                StopCoroutine(flyRotine);
             }
         }
     }

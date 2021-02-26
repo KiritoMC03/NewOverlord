@@ -21,6 +21,7 @@ namespace NewOverlord
 
         [SerializeField] internal Image icon = null;
         [SerializeField] protected int needLevel = 0;
+        [SerializeField] private bool isLocked = true;
         [SerializeField] protected float moveSpeed = 4f;
         [SerializeField] protected float damage = 1f;
         [SerializeField] protected float manaCost = 10f;
@@ -189,6 +190,20 @@ namespace NewOverlord
         public int GetNeedLevel()
         {
             return needLevel;
+        }
+
+        public bool GetIsLock()
+        {
+            UpdateIsLock();
+            return isLocked;
+        }
+
+        private void UpdateIsLock()
+        {
+            if(Stats.GetLevel() >= needLevel)
+            {
+                isLocked = false;
+            }
         }
     }
 }

@@ -76,11 +76,6 @@ namespace NewOverlord
                 pools[type].objects.Dequeue() : InstantiateObject(type, pools[type].container);
 
             obj.SetActive(true);
-            if(obj == null)
-            {
-                throw new Exception("obj = null");
-            }
-            Debug.Log("obj - " + obj);
             return obj;
         }
 

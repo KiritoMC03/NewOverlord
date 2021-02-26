@@ -1392,10 +1392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPoolerType: 0
-  count: 10
+  count: 4294967295
   sinner: {fileID: 8702012970485937761, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9, type: 3}
   _spread: 5
-  speed: 500
+  speed: 1
   walkableGround: {fileID: 1647757023}
 --- !u!4 &535487524
 Transform:
@@ -1681,11 +1681,11 @@ MonoBehaviour:
   - Type: 0
     Prefab: {fileID: 8359432290363877298, guid: d3b4ec5a6eded1949bfd1d79e74fcbd9,
       type: 3}
-    StartCount: 10
+    StartCount: 100
   - Type: 1
     Prefab: {fileID: 4902811997474330813, guid: 22c5bca20f7181f4ead8c7ef4cc96ef2,
       type: 3}
-    StartCount: 10
+    StartCount: 50
 --- !u!1 &693485364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,11 +3241,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list:
+  - {fileID: 4345928715118382277, guid: f310c2dab6bbb1b4bb3d4e57d913ba86, type: 3}
   - {fileID: 8194148519771865595, guid: 97c0ead03d5be174a89c2f8e7ef6acd1, type: 3}
   - {fileID: 5338117462769669128, guid: 538b6e3bfd64a7445af5c05fc95f4140, type: 3}
-  - {fileID: -6380347722395721384, guid: f1c5ddb166ca96447aac7909aa58d597, type: 3}
   - {fileID: -1914340916601320366, guid: 28f850018fbab7c43af300f6eb4845ac, type: 3}
-  - {fileID: 4345928715118382277, guid: f310c2dab6bbb1b4bb3d4e57d913ba86, type: 3}
+  - {fileID: -6380347722395721384, guid: f1c5ddb166ca96447aac7909aa58d597, type: 3}
 --- !u!114 &1060286416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6191286072958320755, guid: aea27fe555a8165459e527706ef8c4f1,
@@ -5115,6 +5115,16 @@ PrefabInstance:
       propertyPath: bar
       value: 
       objectReference: {fileID: 1728301542}
+    - target: {fileID: 6773023123104342759, guid: aea27fe555a8165459e527706ef8c4f1,
+        type: 3}
+      propertyPath: regenSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773023123104342759, guid: aea27fe555a8165459e527706ef8c4f1,
+        type: 3}
+      propertyPath: regenValue
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8806811610312275908, guid: aea27fe555a8165459e527706ef8c4f1,
         type: 3}
       propertyPath: spellManager

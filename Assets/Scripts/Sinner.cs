@@ -63,7 +63,6 @@ namespace NewOverlord
         {
             if (soulCapacity <= 0)
             {
-                Debug.Log("SoulCap: " + soulCapacity + " - " + gameObject);
                 soulCapacity = 100f;
                 mayGetDamage = false;
                 Die();
@@ -77,7 +76,6 @@ namespace NewOverlord
                 StopCoroutine(disableSoulEffectRoutine);
             }
 
-            //Debug.Log("Die! PreSpawn!");
             SpawnSoul();
             ObjectPooler.Instance.DestroyObject(gameObject);
         }
@@ -86,16 +84,12 @@ namespace NewOverlord
         {
             var tempSoul = ObjectPooler.Instance.GetObject(soulType).transform;
             tempSoul.position = _transform.position + offsetFromGround;
-
-            // Instantiate(soul, _transform.position + offsetFromGround, Quaternion.identity);
         }
 
         private void EnableSoulEffectForTime()
         {
-            Debug.Log("EnableSoulEffectForTime");
             if (gameObject.activeInHierarchy)
             {
-                Debug.Log("(gameObject.activeInHierarchy)");
                 soulEffect.SetActive(true);
                 disableSoulEffectRoutine = StartCoroutine(DisableSoulEffectRoutine());
             }

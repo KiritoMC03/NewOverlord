@@ -8,6 +8,7 @@ namespace NewOverlord
     public class SpellLayoutItem : MonoBehaviour
     {
         [SerializeField] private Image spellIcon = null;
+        private Spell spell = null;
 
         internal void SetSpellIcon(Sprite icon)
         {
@@ -15,6 +16,16 @@ namespace NewOverlord
             {
                 spellIcon.sprite = icon;
             }
+        }
+
+        internal void SetSpell(Spell spell)
+        {
+            this.spell = spell;
+        }
+
+        internal Spell GetSpell()
+        {
+            return spell;
         }
     }
 }

@@ -35,16 +35,12 @@ namespace NewOverlord
                 throw new Exception("Поле Walkable Ground не установлено!");
             }
         }
-        void Start()
-        {
-            _spawnerRoutine = StartCoroutine(Spawner());
-        }
 
         IEnumerator Spawner()
         {
             if (sinner == null)
             {
-                throw new Exception("Поле Creature или Area не установлено!");
+                throw new Exception("Поле Sinner не установлено!");
             }
 
             for (int i = 0; i < count; i++)
@@ -65,7 +61,11 @@ namespace NewOverlord
 
         private void OnEnable()
         {
-            _spawnerRoutine = StartCoroutine(Spawner());
+            if (_spawnerRoutine == null)
+            {
+                _spawnerRoutine = StartCoroutine(Spawner());
+            }
+
         }
 
         private void OnDisable()
@@ -75,31 +75,5 @@ namespace NewOverlord
                 StopCoroutine(_spawnerRoutine);
             }
         }
-
-        /*
-        void Start()
-        {
-            _spawnerRoutine = StartCoroutine(Spawner());
-        }
-
-        IEnumerator Spawner()
-        {
-            if (sinner == null)
-            {
-                throw new Exception("Поле Creature или Area не установлено!");
-            }
-
-            for (int i = 0; i < count; i++)
-            {
-                tempSinner = Instantiate(sinner).GetComponent<WanderMode>();
-
-                if (tempSinner != null)
-                {
-                    tempSinner.walkableGround = walkableGround;
-                }
-                yield return new WaitForSeconds(speed);
-            }
-        }
-        */
     }
 }
